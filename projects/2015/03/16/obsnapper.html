@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns:og="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Obsnapper | spcmd</title>
+        
+          <meta name="author" content="spcmd">
+        
+        <meta name="title" content="Obsnapper" >
+        <link rel="icon" type="image/png" href="/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="Obsnapper" />
+<meta name="twitter:title" content="Obsnapper" />
+
+<meta name="keywords" content="openbox, obsnapper, " />
+
+
+<meta name="description" content="I made this bash script for window snapping function under Openbox. I made this for practicing bash and for my personal use. I don&#8217;t plan on taking feature requests or whatever. However, It works for me, so I decided to share this as a project.
+
+">
+<meta property="og:description" content="I made this bash script for window snapping function under Openbox. I made this for practicing bash and for my personal use. I don&#8217;t plan on taking feature requests or whatever. However, It works for me, so I decided to share this as a project.
+
+" />
+<meta name="twitter:description" content="I made this bash script for window snapping function under Openbox. I made this for practicing bash and for my personal use. I don&#8217;t plan on taking feature requests or whatever. However, It works for me, so I decided to share this as a project.
+
+" />
+<meta property="og:type" content="article" />
+<link rel="canonical" href="/projects/2015/03/16/obsnapper.html" />
+
+<meta property="og:image" content="/sharer.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="/sharer.png" />
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body class="wrap">
+      <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+      <header>
+  <h1 class="site-title">&lt;spcmd&gt;</h1>
+  <nav class="main-nav">
+    <a href="#" class="opener show-on-mobiles">...</a>
+    <div class="clear-opener show-on-mobiles"></div>
+    <div class="grid">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/snippets.html">Snippets</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+      <section class="content">
+        <div id="home" class="grid post">
+<div class="unit whole">
+<article>
+	<header>
+		<h1 class="page_title">Obsnapper
+		<p class="post_info">
+			
+		<i class="fa fa-github index_post_categories" title="Projects"></i>
+		
+		<time class="timeago postlist-meta" datetime="2015-03-16"><i class="fa fa-calendar"></i>March 16, 2015</time>
+		<span class="post_info_tag_list"><i class="fa fa-tags"></i><a class="post_page_tag" href="/tags.html#openbox">openbox</a><a class="post_page_tag" href="/tags.html#obsnapper">obsnapper</a></span>
+		</p></h1>
+		<p class="description"></p>
+<!-- 		<p class="meta">
+			<time class="timeago postlist-meta" datetime="2015-03-16"><i class="fa fa-calendar"></i>March 16, 2015</time>
+			<a class="sharer facebook" href="#" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-facebook"></i></a>
+			
+				<a class="sharer twitter" href="#" target="_blank" onclick="window.open('https://twitter.com/share?url='+window.location.href,'_blank','height=300,width=600');return false;"><i class="fa fa-twitter"></i></a>
+			
+		</p> -->
+	</header>
+	<section>
+<!-- 		
+			<div class="tags">
+				Tagged:
+				
+				<span><i class="fa fa-tag"></i>openbox</span>
+				
+				<span><i class="fa fa-tag"></i>obsnapper</span>
+				
+			</div>
+		 -->
+		<p>I made this bash script for window snapping function under Openbox. I made this for practicing bash and for my personal use. I don’t plan on taking feature requests or whatever. However, It works for me, so I decided to share this as a project.</p>
+
+<p>I’m using this script under <em>Ubuntu 14.04</em> with <em>Openbox 3.5.2</em> and <em>tint2 0.11+svn20121014</em> at resolution 1366x768 and 1280x800.</p>
+
+<h4 id="features">Features</h4>
+
+<ul>
+  <li>Window snapping to left and right</li>
+  <li>Restoring window position or restoring window to a fixed position</li>
+</ul>
+
+<h4 id="dependencies">Dependencies</h4>
+
+<ul>
+  <li>xwininfo</li>
+  <li>xprop</li>
+  <li>wmctrl</li>
+  <li>using a panel or dock with openbox</li>
+</ul>
+
+<h4 id="configurable-options">Configurable options</h4>
+
+<ul>
+  <li><code>PANEL_NAME=""</code> (<em>string</em> ; name of the panel or dock ; for example: <strong>tint2</strong>)</li>
+  <li><code>PANEL_ID=""</code> (<em>string</em> ; only if PANEL_NAME is not working ; for example: <strong>0x40006b</strong>)</li>
+  <li><code>PANEL_TYPE=""</code> (<em>string</em> ; options: <code>left</code>, <code>top</code>, <code>bottom</code>)</li>
+  <li><code>PX_CORR_LPT=</code> (<em>integer</em> ; some pixel correction, mainly beacause of borders ; you can use this when PANEL_TYPE is set to “left” ; for example: <strong>2</strong>)</li>
+  <li><code>RESTORE_BEHAVIOUR=""</code> (<em>string</em> ; options: <code>dynamic</code>, <code>fixed</code>)</li>
+  <li>
+    <p><code>TOP_MARGIN=</code> (<em>integer</em> ; margin from the top (in pixel), when RESTORE_BEHAVIOUR is set to “fixed” ; for example: <strong>10</strong>)</p>
+  </li>
+  <li><strong>Notes:</strong>
+    <ul>
+      <li>Do not use quotation marks (<code>""</code>) with <em>integer</em> type options!</li>
+      <li>Run <code>xwininfo</code> in terminal, then click on the panel/dock to get the <code>PANEL_NAME</code> and other window informations.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="installation">Installation</h4>
+
+<ol>
+  <li>Clone this script (<code>git clone https://github.com/spcmd/Obsnapper.git</code>) or <a href="https://github.com/spcmd/Obsnapper">download from Github</a> and copy it to somewhere in your <code>$PATH</code> (for example: <code>~/bin</code> or <code>/usr/bin</code>) or copy wherever you like, then give the full path to the script when using it.</li>
+  <li>Make it executable (for example: <code>chmod +x /path/to/obsnapper</code>)</li>
+  <li>Open the script with a text editor and configure the options (see <code>Configurable options</code> and the detailed comments in the script).</li>
+  <li>Create keybinds for the snapping functions in the Openbox key configuration file (<code>~/.config/openbox/rc.xml</code>), then restart Openbox (<code>openbox --restart</code>).</li>
+</ol>
+
+<h4 id="example-keybinds">Example keybinds</h4>
+<p>For snapping to left with <code>Super+Left</code> and to right with <code>Super+Right</code>, you can copy&amp;paste these keybinds below into <code>~/.config/openbox/rc.xml</code> if you copied the Obsnapper script somewhere in your <code>$PATH</code>. To restore active window, simply hit one of these key combinations again.</p>
+
+<p>If the Obsnapper script <strong>wasn’t</strong> copied to somewhere in your <code>$PATH</code>, you <strong>need</strong> to change the <code>&lt;command&gt;</code> lines to use the full path (for example <code>&lt;command&gt;/path/to/obsnapper --snapleft&lt;/command&gt;</code>)</p>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Window snap Left --&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;W-Left&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;If&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;maximizedvertical&gt;</span>yes<span class="nt">&lt;/maximizedvertical&gt;</span>
+        <span class="nt">&lt;maximizedhorizontal&gt;</span>no<span class="nt">&lt;/maximizedhorizontal&gt;</span>
+        <span class="nt">&lt;then&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;command&gt;</span>obsnapper --restore<span class="nt">&lt;/command&gt;</span>
+          <span class="nt">&lt;/action&gt;</span>
+        <span class="nt">&lt;/then&gt;</span>
+        <span class="nt">&lt;else&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;If&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;maximizedvertical&gt;</span>no<span class="nt">&lt;/maximizedvertical&gt;</span>
+            <span class="nt">&lt;maximizedhorizontal&gt;</span>no<span class="nt">&lt;/maximizedhorizontal&gt;</span>
+            <span class="nt">&lt;then&gt;</span>
+              <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;command&gt;</span>obsnapper --snapleft<span class="nt">&lt;/command&gt;</span>
+              <span class="nt">&lt;/action&gt;</span>
+            <span class="nt">&lt;/then&gt;</span>
+          <span class="nt">&lt;/action&gt;</span>
+        <span class="nt">&lt;/else&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span>
+    <span class="c">&lt;!-- Window snap Right --&gt;</span>
+    <span class="nt">&lt;keybind</span> <span class="na">key=</span><span class="s">&quot;W-Right&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;If&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;maximizedvertical&gt;</span>yes<span class="nt">&lt;/maximizedvertical&gt;</span>
+        <span class="nt">&lt;maximizedhorizontal&gt;</span>no<span class="nt">&lt;/maximizedhorizontal&gt;</span>
+        <span class="nt">&lt;then&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;command&gt;</span>obsnapper --restore<span class="nt">&lt;/command&gt;</span>
+          <span class="nt">&lt;/action&gt;</span>
+        <span class="nt">&lt;/then&gt;</span>
+        <span class="nt">&lt;else&gt;</span>
+          <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;If&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;maximizedvertical&gt;</span>no<span class="nt">&lt;/maximizedvertical&gt;</span>
+            <span class="nt">&lt;maximizedhorizontal&gt;</span>no<span class="nt">&lt;/maximizedhorizontal&gt;</span>
+            <span class="nt">&lt;then&gt;</span>
+              <span class="nt">&lt;action</span> <span class="na">name=</span><span class="s">&quot;Execute&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;command&gt;</span>obsnapper --snapright<span class="nt">&lt;/command&gt;</span>
+              <span class="nt">&lt;/action&gt;</span>
+            <span class="nt">&lt;/then&gt;</span>
+          <span class="nt">&lt;/action&gt;</span>
+        <span class="nt">&lt;/else&gt;</span>
+      <span class="nt">&lt;/action&gt;</span>
+    <span class="nt">&lt;/keybind&gt;</span></code></pre></div>
+
+<h4 id="command-line-options">Command line options</h4>
+
+<ul>
+  <li><code>obsnapper --help</code>  List available options.</li>
+  <li><code>obsnapper --check</code> Check for configuration errors.</li>
+  <li><code>obsnapper --snapleft</code> Snap window to left</li>
+  <li><code>obsnapper --snapright</code> Snap window to right</li>
+  <li><code>obsnapper --restore</code> Restore window position</li>
+  <li>
+    <p><code>obsnapper --version</code> , <code>obsnapper -v</code> Version information</p>
+  </li>
+  <li>Notes:
+    <ul>
+      <li>You can use one command at a time, but you can chain commands  with <code>&amp;&amp;</code> if you like (for example: <code>obsnapper --snapleft &amp;&amp; obsnapper --restore</code>)</li>
+      <li>A <code>--restore</code> should always follow a snap to get the script work properly.</li>
+    </ul>
+  </li>
+</ul>
+
+
+	</section>
+	
+</article>
+</div>
+</div>
+      </section>
+<!--       <footer class="grid site-footer">
+        <p>https://github.com/spcmd</p>
+        <p><small>Powered by <a href="http://jekyllrb.com" target="_blank"><em>Jekyll</em></a> using <a href="http://bitwiser.in/bitwiser/" target="_blank"><em>Bitwiser</em></a> theme.</small></p>
+      </footer> -->
+      
+      <script src="/js/script.js"></script>
+    </body>
+</html>
