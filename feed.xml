@@ -5,9 +5,67 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 16 Mar 2015 18:00:30 +0100</pubDate>
-    <lastBuildDate>Mon, 16 Mar 2015 18:00:30 +0100</lastBuildDate>
+    <pubDate>Tue, 17 Mar 2015 15:04:41 +0100</pubDate>
+    <lastBuildDate>Tue, 17 Mar 2015 15:04:41 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Firefox &gt; mpv</title>
+        <description>&lt;p&gt;Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp;amp; log watched videos, if you want.&lt;/p&gt;
+
+&lt;h4 id=&quot;what-you-need&quot;&gt;What you need&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Firefox (&lt;a href=&quot;https://www.mozilla.org/en-US/firefox/new&quot;&gt;Download&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;“Open With” addon (&lt;a href=&quot;https://addons.mozilla.org/en-us/firefox/addon/open-with/&quot;&gt;Download&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;mpv (&lt;a href=&quot;http://mpv.io/&quot;&gt;Download&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;installation&quot;&gt;Installation&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Clone the repository (&lt;code&gt;git clone https://github.com/spcmd/firefox-mpv.git&lt;/code&gt;) or &lt;a href=&quot;https://github.com/spcmd/firefox-mpv&quot;&gt;download from Github&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Copy &lt;code&gt;firefox-mpv&lt;/code&gt; script to somewhere in your &lt;code&gt;$PATH&lt;/code&gt; (for example: &lt;code&gt;~/bin&lt;/code&gt;) or wherever you like &lt;em&gt;(but this way you have to edit the &lt;code&gt;firefox-mpv.desktop&lt;/code&gt; file – see Notes below!)&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;Make the script executable (&lt;code&gt;chmod +x /path/to/firefox-mpv&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Copy the &lt;code&gt;firefox-mpv.desktop&lt;/code&gt; file to your applications directory (for example: &lt;code&gt;~/.local/share/applications&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;You might have to make the .desktop file executable too (&lt;code&gt;chmod +x /path/to/firefox-mpv.desktop&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Open the &lt;code&gt;firefox-mpv&lt;/code&gt; file with a text editor and configure (see &lt;code&gt;Configurable options&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Open the &lt;em&gt;“Open With”&lt;/em&gt; addon’s settings in Firefox, click on the “Add” button and browse for the &lt;code&gt;firefox-mpv.desktop&lt;/code&gt; file, then click Open.&lt;/li&gt;
+  &lt;li&gt;Now you should have an &lt;em&gt;Open Link with Firefox &amp;gt; mpv&lt;/em&gt; in Firefox’s context menu (right click menu).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;** Notes: if you didn’t copy the script to somewhere in your &lt;code&gt;$PATH&lt;/code&gt;, you have to open the &lt;code&gt;firefox-mpv.desktop&lt;/code&gt; file in a text editor and edit the &lt;code&gt;Exec=firefox-mpv&lt;/code&gt; line by setting the correct path (&lt;code&gt;Exec=/path/to/firefox-mpv&lt;/code&gt;)&lt;/p&gt;
+
+&lt;h4 id=&quot;configurable-options&quot;&gt;Configurable options&lt;/h4&gt;
+
+&lt;p&gt;These are the &lt;strong&gt;default&lt;/strong&gt; settings!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;LOGGING=&quot;yes&quot;&lt;/code&gt; Log watched videos into a html file. (Leave it empty if you don’t want watched videos to be logged: &lt;code&gt;LOGGING=&quot;&quot;&lt;/code&gt; )&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;DATETIME=$(date &quot;+%Y.%m.%d. %H:%M:%S&quot;)&lt;/code&gt; Date and time format for the log&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;LOGFILE=~/.firefox-mpv-history.html&lt;/code&gt; Log file location (default: your home directory)&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;LOGTEMP=~/.firefox-mpv-history-temp&lt;/code&gt; Temporary file location (default: your home directory ; it gets deleted automatically when the logging has finished!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;why-do-you-need-the-desktop-file&quot;&gt;Why do you need the .desktop file?&lt;/h4&gt;
+
+&lt;p&gt;The script &lt;em&gt;works&lt;/em&gt; without using the .desktop file (in the “Open with” addon’s settings you can use the script instead of the .desktop file), but with the .desktop file, the script works like an application and you have an icon (mpv’s icon) in Firefox’s context menu.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 17 Mar 2015 16:00:00 +0100</pubDate>
+        <link>/projects/2015/03/17/firefox-mpv.html</link>
+        <guid isPermaLink="true">/projects/2015/03/17/firefox-mpv.html</guid>
+        
+        <category>firefox</category>
+        
+        <category>mpv</category>
+        
+        <category>youtube</category>
+        
+        
+        <category>projects</category>
+        
+      </item>
     
       <item>
         <title>Obsnapper</title>
