@@ -120,7 +120,7 @@
 </div>
 
 <div class="unit whole single-post-excerpt">
-	<h2><a href="/snippets/2015/03/16/notify-when-update-is-finished.html">Notify when update is finished</a>
+	<h2><a href="/snippets/2015/03/16/notify-when-update-finished.html">Notify when update finished</a>
 	<p class="post_info">
 	
 		<i class="fa fa-code index_post_categories" title="Snippets"></i>
@@ -144,14 +144,7 @@
 	
 		<p>Put this code somewhere in your <code>~/.bashrc</code> or  <code>~/.bash_aliases</code></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">updatefunc<span class="o">()</span> <span class="o">{</span>
-    sudo apt-get update <span class="p">;</span> notify-send -i terminal <span class="s2">&quot;Update finished!&quot;</span>
-<span class="o">}</span>
-upgradefunc<span class="o">()</span> <span class="o">{</span>
-    sudo apt-get upgrade <span class="p">;</span> notify-send -i terminal <span class="s2">&quot;Upgrade finished!&quot;</span>
-<span class="o">}</span>
-<span class="nb">alias </span><span class="nv">update</span><span class="o">=</span>updatefunc
-<span class="nb">alias </span><span class="nv">upgrade</span><span class="o">=</span>upgradefunc</code></pre></div>
+<script src="https://gist.github.com/spcmd/bde66e458eed7e8e60fd.js"></script>
 
 <p>Then you can run the <code>update</code> or <code>upgrade</code> command and the system will notify you when it’s finished.</p>
 

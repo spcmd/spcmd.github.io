@@ -3,15 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Notify when update is finished | spcmd</title>
+        <title>Notify when update finished | spcmd</title>
         
           <meta name="author" content="spcmd">
         
-        <meta name="title" content="Notify when update is finished" >
+        <meta name="title" content="Notify when update finished" >
         <link rel="icon" type="image/png" href="/favicon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:title" content="Notify when update is finished" />
-<meta name="twitter:title" content="Notify when update is finished" />
+        <meta property="og:title" content="Notify when update finished" />
+<meta name="twitter:title" content="Notify when update finished" />
 
 <meta name="keywords" content="bash, " />
 
@@ -26,7 +26,7 @@
 
 " />
 <meta property="og:type" content="article" />
-<link rel="canonical" href="/snippets/2015/03/16/notify-when-update-is-finished.html" />
+<link rel="canonical" href="/snippets/2015/03/16/notify-when-update-finished.html" />
 
 <meta property="og:image" content="/sharer.png" />
 <meta name="twitter:card" content="summary" />
@@ -59,7 +59,7 @@
 <div class="unit whole">
 <article>
 	<header>
-		<h1 class="page_title">Notify when update is finished
+		<h1 class="page_title">Notify when update finished
 		<p class="post_info">
 			
 		<i class="fa fa-code index_post_categories" title="Snippets"></i>
@@ -87,14 +87,7 @@
 		 -->
 		<p>Put this code somewhere in your <code>~/.bashrc</code> or  <code>~/.bash_aliases</code></p>
 
-<div class="highlight"><pre><code class="language-bash" data-lang="bash">updatefunc<span class="o">()</span> <span class="o">{</span>
-    sudo apt-get update <span class="p">;</span> notify-send -i terminal <span class="s2">&quot;Update finished!&quot;</span>
-<span class="o">}</span>
-upgradefunc<span class="o">()</span> <span class="o">{</span>
-    sudo apt-get upgrade <span class="p">;</span> notify-send -i terminal <span class="s2">&quot;Upgrade finished!&quot;</span>
-<span class="o">}</span>
-<span class="nb">alias </span><span class="nv">update</span><span class="o">=</span>updatefunc
-<span class="nb">alias </span><span class="nv">upgrade</span><span class="o">=</span>upgradefunc</code></pre></div>
+<script src="https://gist.github.com/spcmd/bde66e458eed7e8e60fd.js"></script>
 
 <p>Then you can run the <code>update</code> or <code>upgrade</code> command and the system will notify you when it’s finished.</p>
 

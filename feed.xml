@@ -5,8 +5,8 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 Mar 2015 15:04:41 +0100</pubDate>
-    <lastBuildDate>Tue, 17 Mar 2015 15:04:41 +0100</lastBuildDate>
+    <pubDate>Thu, 19 Mar 2015 10:09:12 +0100</pubDate>
+    <lastBuildDate>Thu, 19 Mar 2015 10:09:12 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -203,23 +203,16 @@
       </item>
     
       <item>
-        <title>Notify when update is finished</title>
+        <title>Notify when update finished</title>
         <description>&lt;p&gt;Put this code somewhere in your &lt;code&gt;~/.bashrc&lt;/code&gt; or  &lt;code&gt;~/.bash_aliases&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;updatefunc&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    sudo apt-get update &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; notify-send -i terminal &lt;span class=&quot;s2&quot;&gt;&amp;quot;Update finished!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-upgradefunc&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    sudo apt-get upgrade &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; notify-send -i terminal &lt;span class=&quot;s2&quot;&gt;&amp;quot;Upgrade finished!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;updatefunc
-&lt;span class=&quot;nb&quot;&gt;alias &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;upgrade&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;upgradefunc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;script src=&quot;https://gist.github.com/spcmd/bde66e458eed7e8e60fd.js&quot;&gt;&lt;/script&gt;
 
 &lt;p&gt;Then you can run the &lt;code&gt;update&lt;/code&gt; or &lt;code&gt;upgrade&lt;/code&gt; command and the system will notify you when it’s finished.&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Mar 2015 14:30:00 +0100</pubDate>
-        <link>/snippets/2015/03/16/notify-when-update-is-finished.html</link>
-        <guid isPermaLink="true">/snippets/2015/03/16/notify-when-update-is-finished.html</guid>
+        <link>/snippets/2015/03/16/notify-when-update-finished.html</link>
+        <guid isPermaLink="true">/snippets/2015/03/16/notify-when-update-finished.html</guid>
         
         <category>bash</category>
         
