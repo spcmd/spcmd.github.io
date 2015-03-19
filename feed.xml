@@ -5,9 +5,37 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 Mar 2015 10:09:12 +0100</pubDate>
-    <lastBuildDate>Thu, 19 Mar 2015 10:09:12 +0100</lastBuildDate>
+    <pubDate>Thu, 19 Mar 2015 13:27:20 +0100</pubDate>
+    <lastBuildDate>Thu, 19 Mar 2015 13:27:20 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Port.hu EPG userstyle</title>
+        <description>&lt;h4 id=&quot;eltte&quot;&gt;Előtte&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/l7YlLk0.png&quot; alt=&quot;before&quot; title=&quot;before&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;utna&quot;&gt;Utána&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eMxr68X.png&quot; alt=&quot;after&quot; title=&quot;after&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;userstyle&quot;&gt;Userstyle&lt;/h4&gt;
+
+&lt;p&gt;Használhatod a &lt;a href=&quot;https://addons.mozilla.org/en-us/firefox/addon/stylish&quot;&gt;Stylish&lt;/a&gt; kiegészítővel (vagy más userstyle kezelő kiegészítővel), vagy a teheted a Firefox &lt;a href=&quot;http://kb.mozillazine.org/UserContent.css&quot;&gt;userContent.css&lt;/a&gt; fájljába is.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/spcmd/b5a76bbfa4614f4eb4c2.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Thu, 19 Mar 2015 13:30:00 +0100</pubDate>
+        <link>/snippets/2015/03/19/porthu-epg-userstyle.html</link>
+        <guid isPermaLink="true">/snippets/2015/03/19/porthu-epg-userstyle.html</guid>
+        
+        <category>userstyle</category>
+        
+        
+        <category>snippets</category>
+        
+      </item>
     
       <item>
         <title>Firefox &gt; mpv</title>
