@@ -5,9 +5,31 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 20 Mar 2015 16:34:33 +0100</pubDate>
-    <lastBuildDate>Fri, 20 Mar 2015 16:34:33 +0100</lastBuildDate>
+    <pubDate>Sat, 21 Mar 2015 16:27:52 +0100</pubDate>
+    <lastBuildDate>Sat, 21 Mar 2015 16:27:52 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>ubsi</title>
+        <description>&lt;p&gt;&lt;strong&gt;ubsi&lt;/strong&gt; is a simple Ubuntu System Information script, similar to &lt;em&gt;Archey&lt;/em&gt;, but ubsi is simpler, it comes only with an Ubuntu logo ascii (so no other distro logos included). I made it for my system, you might have to tweak it here and there.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/ubsi.png&quot; alt=&quot;ubsi-screenshot&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can copy this script to somewhere in your &lt;code&gt;$PATH&lt;/code&gt; (e.g. &lt;code&gt;~/bin&lt;/code&gt;), make it executable (&lt;code&gt;chmod +x /path/to/ubsi&lt;/code&gt;) then you can run &lt;code&gt;ubsi&lt;/code&gt; to get the system information. Or you can put this code into your &lt;code&gt;.bashrc&lt;/code&gt; or to a separate file, it’s your choice how you use it.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/spcmd/ddfcff84667c874c9b46.js&quot;&gt;&lt;/script&gt;
+
+</description>
+        <pubDate>Sat, 21 Mar 2015 16:40:00 +0100</pubDate>
+        <link>/snippets/2015/03/21/ubsi.html</link>
+        <guid isPermaLink="true">/snippets/2015/03/21/ubsi.html</guid>
+        
+        <category>bash</category>
+        
+        
+        <category>snippets</category>
+        
+      </item>
     
       <item>
         <title>qxbacklight</title>
