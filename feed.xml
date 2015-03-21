@@ -5,8 +5,8 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Mar 2015 16:27:52 +0100</pubDate>
-    <lastBuildDate>Sat, 21 Mar 2015 16:27:52 +0100</lastBuildDate>
+    <pubDate>Sat, 21 Mar 2015 16:34:29 +0100</pubDate>
+    <lastBuildDate>Sat, 21 Mar 2015 16:34:29 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -124,11 +124,11 @@
         <title>Port.hu EPG userstyle</title>
         <description>&lt;h4 id=&quot;eltte&quot;&gt;Előtte&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/l7YlLk0.png&quot; alt=&quot;before&quot; title=&quot;before&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/porthu_before.png&quot; alt=&quot;screenshot-előtte&quot; title=&quot;Előtte&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;utna&quot;&gt;Utána&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://i.imgur.com/eMxr68X.png&quot; alt=&quot;after&quot; title=&quot;after&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/porthu_after.png&quot; alt=&quot;screenshot-utána&quot; title=&quot;Utána&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;userstyle&quot;&gt;Userstyle&lt;/h4&gt;
 
