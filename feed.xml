@@ -5,8 +5,8 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 21 Mar 2015 16:34:29 +0100</pubDate>
-    <lastBuildDate>Sat, 21 Mar 2015 16:34:29 +0100</lastBuildDate>
+    <pubDate>Tue, 24 Mar 2015 12:23:40 +0100</pubDate>
+    <lastBuildDate>Tue, 24 Mar 2015 12:23:40 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -122,17 +122,15 @@
     
       <item>
         <title>Port.hu EPG userstyle</title>
-        <description>&lt;h4 id=&quot;eltte&quot;&gt;Előtte&lt;/h4&gt;
+        <description>&lt;h4 id=&quot;sszehasonlts-eltte---utna&quot;&gt;Összehasonlítás (Előtte - Utána)&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/porthu_before.png&quot; alt=&quot;screenshot-előtte&quot; title=&quot;Előtte&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;utna&quot;&gt;Utána&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/porthu_after.png&quot; alt=&quot;screenshot-utána&quot; title=&quot;Utána&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/porthu_userstyle_before_after.png&quot; alt=&quot;screenshot-előtte&quot; title=&quot;Előtte-Utána&quot; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;userstyle&quot;&gt;Userstyle&lt;/h4&gt;
 
 &lt;p&gt;Használhatod a &lt;a href=&quot;https://addons.mozilla.org/en-us/firefox/addon/stylish&quot;&gt;Stylish&lt;/a&gt; kiegészítővel (vagy más userstyle kezelő kiegészítővel), vagy a teheted a Firefox &lt;a href=&quot;http://kb.mozillazine.org/UserContent.css&quot;&gt;userContent.css&lt;/a&gt; fájljába is.&lt;/p&gt;
+
+&lt;p&gt;A userstyle a &lt;em&gt;http://port.hu/tv/pls/tv/oldtv.prog&lt;/em&gt; címmel működik, ami a régebbi víszszintes elrendezésű felület. Lehetséges, hogy ez már csak regisztrált felhasználóként érhető el.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/spcmd/b5a76bbfa4614f4eb4c2.js&quot;&gt;&lt;/script&gt;
 
