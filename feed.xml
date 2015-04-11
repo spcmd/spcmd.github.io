@@ -5,9 +5,32 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Apr 2015 14:53:45 +0200</pubDate>
-    <lastBuildDate>Wed, 08 Apr 2015 14:53:45 +0200</lastBuildDate>
+    <pubDate>Sat, 11 Apr 2015 17:50:04 +0200</pubDate>
+    <lastBuildDate>Sat, 11 Apr 2015 17:50:04 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Vim Easy TODO</title>
+        <description>&lt;p&gt;Today I released my very first Vim plugin called &lt;strong&gt;Vim Easy TODO&lt;/strong&gt;. I’m using Vim for about 3 weeks now, and I like it a lot. I still have a lot to learn, but I’m looking forward to it. I needed some To-do list plugin like &lt;a href=&quot;https://github.com/aziz/PlainTasks&quot;&gt;PlainTasks&lt;/a&gt; for Sublime Text. But I didn’t want to use some “heavy” plugin, I just needed to have some basic, formatted/colorized To-do list. So I decided to write it for myself. It’s not perfect, but it does the job. It has some basic customization feature, but not too much. Keep it simple and stupid, you now. :)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Vim Easy TODO&lt;/strong&gt; is a simple &amp;amp; easy to use ‘To-do list’ plugin for - of course - Vim. For those who need only some basic functionality when creating To-do lists.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/vim-easy-todo.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you interested, please visit the project’s page on github:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/spcmd/vim-easy-todo&quot;&gt;https://github.com/spcmd/vim-easy-todo&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 11 Apr 2015 19:50:00 +0200</pubDate>
+        <link>/projects/2015/04/11/vim-easy-todo.html</link>
+        <guid isPermaLink="true">/projects/2015/04/11/vim-easy-todo.html</guid>
+        
+        <category>vim</category>
+        
+        
+        <category>projects</category>
+        
+      </item>
     
       <item>
         <title>ubsi</title>
