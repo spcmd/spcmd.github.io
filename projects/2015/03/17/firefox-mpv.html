@@ -16,13 +16,13 @@
 <meta name="keywords" content="bash, firefox, mpv, youtube, " />
 
 
-<meta name="description" content="Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos, if you want.
+<meta name="description" content="Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos.
 
 ">
-<meta property="og:description" content="Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos, if you want.
+<meta property="og:description" content="Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos.
 
 " />
-<meta name="twitter:description" content="Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos, if you want.
+<meta name="twitter:description" content="Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos.
 
 " />
 <meta property="og:type" content="article" />
@@ -91,45 +91,13 @@
 				
 			</div>
 		 -->
-		<p>Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos, if you want.</p>
+		<p>Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos.</p>
 
-<h4 id="what-you-need">What you need</h4>
+<p><strong>Update</strong> (2015.04.20.): added auto stop/play Spotify options.</p>
 
-<ul>
-  <li>Firefox (<a href="https://www.mozilla.org/en-US/firefox/new">Download</a>)</li>
-  <li>“Open With” addon (<a href="https://addons.mozilla.org/en-us/firefox/addon/open-with/">Download</a>)</li>
-  <li>mpv (<a href="http://mpv.io/">Download</a>)</li>
-</ul>
+<p>You can find the documentation and the instructions on the Github page:</p>
 
-<h4 id="installation">Installation</h4>
-
-<ol>
-  <li>Clone the repository (<code>git clone https://github.com/spcmd/firefox-mpv.git</code>) or <a href="https://github.com/spcmd/firefox-mpv">download from Github</a>.</li>
-  <li>Copy <code>firefox-mpv</code> script to somewhere in your <code>$PATH</code> (for example: <code>~/bin</code>) or wherever you like <em>(but this way you have to edit the <code>firefox-mpv.desktop</code> file – see Notes below!)</em>.</li>
-  <li>Make the script executable (<code>chmod +x /path/to/firefox-mpv</code>)</li>
-  <li>Copy the <code>firefox-mpv.desktop</code> file to your applications directory (for example: <code>~/.local/share/applications</code>)</li>
-  <li>You might have to make the .desktop file executable too (<code>chmod +x /path/to/firefox-mpv.desktop</code>)</li>
-  <li>Open the <code>firefox-mpv</code> file with a text editor and configure (see <code>Configurable options</code>)</li>
-  <li>Open the <em>“Open With”</em> addon’s settings in Firefox, click on the “Add” button and browse for the <code>firefox-mpv.desktop</code> file, then click Open.</li>
-  <li>Now you should have an <em>Open Link with Firefox &gt; mpv</em> in Firefox’s context menu (right click menu).</li>
-</ol>
-
-<p>** Notes: if you didn’t copy the script to somewhere in your <code>$PATH</code>, you have to open the <code>firefox-mpv.desktop</code> file in a text editor and edit the <code>Exec=firefox-mpv</code> line by setting the correct path (<code>Exec=/path/to/firefox-mpv</code>)</p>
-
-<h4 id="configurable-options">Configurable options</h4>
-
-<p>These are the <strong>default</strong> settings!</p>
-
-<ul>
-  <li><code>LOGGING="yes"</code> Log watched videos into a html file. (Leave it empty if you don’t want watched videos to be logged: <code>LOGGING=""</code> )</li>
-  <li><code>DATETIME=$(date "+%Y.%m.%d. %H:%M:%S")</code> Date and time format for the log</li>
-  <li><code>LOGFILE=~/.firefox-mpv-history.html</code> Log file location (default: your home directory)</li>
-  <li><code>LOGTEMP=~/.firefox-mpv-history-temp</code> Temporary file location (default: your home directory ; it gets deleted automatically when the logging has finished!)</li>
-</ul>
-
-<h4 id="why-do-you-need-the-desktop-file">Why do you need the .desktop file?</h4>
-
-<p>The script <em>works</em> without using the .desktop file (in the “Open with” addon’s settings you can use the script instead of the .desktop file), but with the .desktop file, the script works like an application and you have an icon (mpv’s icon) in Firefox’s context menu.</p>
+<p><a href="https://github.com/spcmd/firefox-mpv">https://github.com/spcmd/firefox-mpv</a></p>
 
 
 	</section>
