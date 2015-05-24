@@ -36,25 +36,67 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
       <header>
-  <h1 class="site-title">&lt;spcmd&gt;</h1>
+  <!--<h1 class="site-title">&lt;spcmd&gt;</h1>-->
   <nav class="main-nav">
     <a href="#" class="opener show-on-mobiles">...</a>
     <div class="clear-opener show-on-mobiles"></div>
     <div class="grid">
       <ul>
+        <li id="title-top">spcmd</li>
         <li><a href="/">Home</a></li>
         <li><a href="/projects.html">Projects</a></li>
         <li><a href="/snippets.html">Snippets</a></li>
+        <li><a href="/tags.html">Tags</a></li>
         <li><a href="/about.html">About</a></li>
       </ul>
     </div>
   </nav>
 </header>
+
       <section class="content">
         <div id="home" class="grid">
 	
     <div class="unit whole posts">
         
+<div class="unit whole single-post-excerpt">
+	<h2><a href="/2015/05/24/Fix-Acer-laptop-freezes-with-Arch-and-other-systemd-based-distros.html">Fix: Acer Laptop freezes with Arch Linux and other systemd based distros</a>
+	<p class="post_info">
+	
+		<!-- <i class="fa fa-file-text-o index_post_categories" title="Uncategorized"></i> -->
+	
+	<time class="timeago postlist-meta" datetime="2015-05-24"><i class="fa fa-calendar"></i>May 24, 2015</time>
+	<span class="post_info_tag_list"><i class="fa fa-tags"></i><a class="post_page_tag" href="/tags.html#arch">arch</a><a class="post_page_tag" href="/tags.html#acer">acer</a><a class="post_page_tag" href="/tags.html#fix">fix</a></span>
+	</p>
+	</h2>
+	<!-- <div class="meta-info">
+		<span class="meta"><time class="timeago postlist-meta" datetime="2015-05-24"><i class="fa fa-calendar"></i>May 24, 2015</time></span>
+		
+			<div class="tags">
+				Tagged:
+				
+				<span><i class="fa fa-tag"></i>arch</span>
+				
+				<span><i class="fa fa-tag"></i>acer</span>
+				
+				<span><i class="fa fa-tag"></i>fix</span>
+				
+			</div>
+		
+	</div> -->
+	<p class="description">
+	
+		<p>I had a problem with Arch-based (or systemd based?) distros with my Acer ES1-512 laptop. Every time I used <code>systemctl suspend</code> or <code>pm-suspend</code> the whole system just totally froze. Shutdown didn’t work either: the system was shut down, but the laptop didn’t turn off (screen backlight was on, and the fans were working too). I tried a bunch of kernels, systemd versions, different kernel parameters, but neither of them worked.</p>
+
+<p>A week ago I installed Arch again and played around with the BIOS settings (again). Then I’ve found the source of the problem, or at least I think: I had to <strong>disable the xHCI support</strong> (External USB 3.0 controller) in the BIOS settings. After I disabled it, the freezes were stopped, my Acer laptop started to work properly. Shutdown works too.</p>
+
+<p>I answered a question about this in the Arch Linux forums too: <a href="https://bbs.archlinux.org/viewtopic.php?pid=1529860#p1529860">Acer Aspire E13 : Suspend/Poweroff don’t Work</a></p>
+
+<p><strong>UPDATE:</strong> The problem exists with Debian 8 “Jessie” too, so it seems it’s not Arch-specific, rather systemd-specific, I think. The solution should work with Debian (or with other systemd based distros) too.</p>
+
+	
+	</p>
+</div>
+
 <div class="unit whole single-post-excerpt">
 	<h2><a href="/snippets/2015/04/25/Vimpv.html">Vimpv</a>
 	<p class="post_info">
@@ -199,37 +241,6 @@
 	
 		ubsi is a simple Ubuntu System Information bash script
 	<a class="read-more" href="/snippets/2015/03/21/ubsi.html">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
-	
-	</p>
-</div>
-
-<div class="unit whole single-post-excerpt">
-	<h2><a href="/projects/2015/03/20/qxbacklight.html">qxbacklight</a>
-	<p class="post_info">
-	
-		<i class="fa fa-github index_post_categories" title="Projects"></i>
-	
-	<time class="timeago postlist-meta" datetime="2015-03-20"><i class="fa fa-calendar"></i>March 20, 2015</time>
-	<span class="post_info_tag_list"><i class="fa fa-tags"></i><a class="post_page_tag" href="/tags.html#bash">bash</a><a class="post_page_tag" href="/tags.html#backlight">backlight</a></span>
-	</p>
-	</h2>
-	<!-- <div class="meta-info">
-		<span class="meta"><time class="timeago postlist-meta" datetime="2015-03-20"><i class="fa fa-calendar"></i>March 20, 2015</time></span>
-		
-			<div class="tags">
-				Tagged:
-				
-				<span><i class="fa fa-tag"></i>bash</span>
-				
-				<span><i class="fa fa-tag"></i>backlight</span>
-				
-			</div>
-		
-	</div> -->
-	<p class="description">
-	
-		A bash script for setting the brightness with xbacklight quickly.
-	<a class="read-more" href="/projects/2015/03/20/qxbacklight.html">Read more&nbsp;<i class="fa fa-chevron-right"></i></a>
 	
 	</p>
 </div>

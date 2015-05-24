@@ -2,6 +2,15 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
     <url>
+      <loc>/2015/05/24/Fix-Acer-laptop-freezes-with-Arch-and-other-systemd-based-distros.html</loc>
+      
+        <lastmod>2015-05-24T17:10:00+02:00</lastmod>
+      
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+    </url>
+  
+    <url>
       <loc>/snippets/2015/04/25/Vimpv.html</loc>
       
         <lastmod>2015-04-25T18:30:00+02:00</lastmod>

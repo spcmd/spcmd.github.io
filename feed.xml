@@ -5,9 +5,32 @@
     <description>spcmd</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 25 Apr 2015 16:33:53 +0200</pubDate>
-    <lastBuildDate>Sat, 25 Apr 2015 16:33:53 +0200</lastBuildDate>
+    <pubDate>Sun, 24 May 2015 15:12:49 +0200</pubDate>
+    <lastBuildDate>Sun, 24 May 2015 15:12:49 +0200</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Fix: Acer Laptop freezes with Arch Linux and other systemd based distros</title>
+        <description>&lt;p&gt;I had a problem with Arch-based (or systemd based?) distros with my Acer ES1-512 laptop. Every time I used &lt;code&gt;systemctl suspend&lt;/code&gt; or &lt;code&gt;pm-suspend&lt;/code&gt; the whole system just totally froze. Shutdown didn’t work either: the system was shut down, but the laptop didn’t turn off (screen backlight was on, and the fans were working too). I tried a bunch of kernels, systemd versions, different kernel parameters, but neither of them worked.&lt;/p&gt;
+
+&lt;p&gt;A week ago I installed Arch again and played around with the BIOS settings (again). Then I’ve found the source of the problem, or at least I think: I had to &lt;strong&gt;disable the xHCI support&lt;/strong&gt; (External USB 3.0 controller) in the BIOS settings. After I disabled it, the freezes were stopped, my Acer laptop started to work properly. Shutdown works too.&lt;/p&gt;
+
+&lt;p&gt;I answered a question about this in the Arch Linux forums too: &lt;a href=&quot;https://bbs.archlinux.org/viewtopic.php?pid=1529860#p1529860&quot;&gt;Acer Aspire E13 : Suspend/Poweroff don’t Work&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;UPDATE:&lt;/strong&gt; The problem exists with Debian 8 “Jessie” too, so it seems it’s not Arch-specific, rather systemd-specific, I think. The solution should work with Debian (or with other systemd based distros) too.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 May 2015 17:10:00 +0200</pubDate>
+        <link>/2015/05/24/Fix-Acer-laptop-freezes-with-Arch-and-other-systemd-based-distros.html</link>
+        <guid isPermaLink="true">/2015/05/24/Fix-Acer-laptop-freezes-with-Arch-and-other-systemd-based-distros.html</guid>
+        
+        <category>arch</category>
+        
+        <category>acer</category>
+        
+        <category>fix</category>
+        
+        
+      </item>
     
       <item>
         <title>Vimpv</title>
