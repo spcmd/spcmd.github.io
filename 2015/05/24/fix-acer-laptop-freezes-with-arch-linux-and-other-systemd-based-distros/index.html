@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fix: Acer Laptop freezes with Arch Linux and other systemd based distros - spcmd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://spcmd.github.io/2015/05/24/fix-acer-laptop-freezes-with-arch-linux-and-other-systemd-based-distros/">
+  
+  
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/basscss.css">
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/main.css">
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://spcmd.github.io" class="site-title">/home/spcmd</a>
+      <nav class="site-nav">
+      <a href="http://spcmd.github.io/tags">/tags</a>
+<a href="http://spcmd.github.io/about">/about</a>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Fix: Acer Laptop freezes with Arch Linux and other systemd based distros</h1>
+        <p class="post-meta">May 24, 2015
+      | Tags:&nbsp;
+        
+            
+            <a href="http://spcmd.github.io/tags/arch">arch</a>
+        
+            ,&nbsp;
+            <a href="http://spcmd.github.io/tags/systemd">systemd</a>
+        
+            ,&nbsp;
+            <a href="http://spcmd.github.io/tags/fix">fix</a>
+        
+      </p>
+ </div>
+      <article class="post-content">
+      <p>I had a problem with Arch-based (or systemd based?) distros with my Acer ES1-512 laptop. Every time I used <code>systemctl suspend</code> or <code>pm-suspend</code> the whole system just totally froze. Shutdown didn&rsquo;t work either: the system was shut down, but the laptop didn&rsquo;t turn off (screen backlight was on, and the fans were working too). I tried a bunch of kernels, systemd versions, different kernel parameters, but neither of them worked.</p>
+
+<p>A week ago I installed Arch again and played around with the BIOS settings (again). Then I&rsquo;ve found the source of the problem, or at least I think: I had to <strong>disable the xHCI support</strong> (External USB 3.0 controller) in the BIOS settings. After I disabled it, the freezes were stopped, my Acer laptop started to work properly. Shutdown works too.</p>
+
+<p>I answered a question about this in the Arch Linux forums too: <a href="https://bbs.archlinux.org/viewtopic.php?pid=1529860#p1529860">Acer Aspire E13 : Suspend/Poweroff don&rsquo;t Work</a></p>
+
+<p><strong>UPDATE:</strong> The problem exists with Debian 8 &ldquo;Jessie&rdquo; too, so it seems it&rsquo;s not Arch-specific, rather systemd-specific, I think. The solution should work with Debian (or with other systemd based distros) too.</p>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+          <small>
+              Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a><br>Theme is based on <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Backlight on spcmd </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://spcmd.github.io/tags/backlight/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Fri, 20 Mar 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>qxbacklight</title>
+      <link>http://spcmd.github.io/2015/03/20/qxbacklight/</link>
+      <pubDate>Fri, 20 Mar 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://spcmd.github.io/2015/03/20/qxbacklight/</guid>
+      <description>A bash script for setting the brightness with xbacklight quickly. Dependencies xbacklight Installation Clone the repository (https://github.com/spcmd/qxbacklight.git) or download from Github. Copy qxbacklight to somewhere in your $PATH (for example: ~/bin) or copy wherever you like, then give the full path to the script when using it. Make it executable (for example: chmod +x /path/to/qxbacklight) Open the script with a text editor and configure the options (see Configurable Options and the detailed comments in the script).</description>
+    </item>
+    
+  </channel>
+</rss>
+

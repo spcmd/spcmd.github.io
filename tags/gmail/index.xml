@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Gmail on spcmd </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://spcmd.github.io/tags/gmail/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sat, 25 Apr 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>ignotifier-setbadge</title>
+      <link>http://spcmd.github.io/2015/04/25/ignotifier-setbadge/</link>
+      <pubDate>Sat, 25 Apr 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://spcmd.github.io/2015/04/25/ignotifier-setbadge/</guid>
+      <description>Since the Gmail Notifier (ignotifier) addon doesn&amp;rsquo;t allow us to change its icon badge color (and it cannot be styled via css), I made a simple bash script which allows us to change those colors. You can the find the script and the documentation on github: https://github.com/spcmd/ignotifier-setbadge</description>
+    </item>
+    
+  </channel>
+</rss>
+

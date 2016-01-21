@@ -1,0 +1,142 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>qxbacklight - spcmd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://spcmd.github.io/2015/03/20/qxbacklight/">
+  
+  
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/basscss.css">
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/main.css">
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://spcmd.github.io" class="site-title">/home/spcmd</a>
+      <nav class="site-nav">
+      <a href="http://spcmd.github.io/tags">/tags</a>
+<a href="http://spcmd.github.io/about">/about</a>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">qxbacklight</h1>
+        <p class="post-meta">Mar 20, 2015
+      | Tags:&nbsp;
+        
+            
+            <a href="http://spcmd.github.io/tags/backlight">backlight</a>
+        
+      </p>
+ </div>
+      <article class="post-content">
+      
+
+<p>A bash script for setting the brightness with <code>xbacklight</code> <strong>q</strong>uickly.</p>
+
+<h4 id="dependencies:508a03f8c04b52a769d56187f3644413">Dependencies</h4>
+
+<ul>
+<li>xbacklight</li>
+</ul>
+
+<h4 id="installation:508a03f8c04b52a769d56187f3644413">Installation</h4>
+
+<ol>
+<li>Clone the repository (<code>https://github.com/spcmd/qxbacklight.git</code>) or <a href="https://github.com/spcmd/qxbacklight">download from Github</a>.</li>
+<li>Copy <code>qxbacklight</code> to somewhere in your <code>$PATH</code> (for example: <code>~/bin</code>) or copy wherever you like, then give the full path to the script when using it.</li>
+<li>Make it executable (for example: <code>chmod +x /path/to/qxbacklight</code>)</li>
+<li>Open the script with a text editor and configure the options (see <code>Configurable Options</code> and the detailed comments in the script).</li>
+<li>Create keybinds for the <code>qxbacklight</code> commands (see <code>Commands</code>)</li>
+</ol>
+
+<h4 id="commands:508a03f8c04b52a769d56187f3644413">Commands</h4>
+
+<ul>
+<li><code>qxbacklight --help</code>  Help &amp; basic information.</li>
+<li><code>qxbacklight --up</code>  Increase brightness.</li>
+<li><code>qxbacklight --down</code>  Decrease brightness.</li>
+<li><code>qxbacklight --default</code>  Set brightness value to default.</li>
+</ul>
+
+<h4 id="configurable-options:508a03f8c04b52a769d56187f3644413">Configurable Options</h4>
+
+<p><strong>Strongly recommended</strong> to configure these options for yourself!
+<br>I left my values as a default (for reference: I&rsquo;m using a Notebook with LED LCD display, which is very bright, so my values are relatively low).</p>
+
+<ul>
+<li><code>DEFAULT_BR=18</code> Default brightness (in percentage).</li>
+<li><code>STEP_AMOUNT=2</code> Decrease/increase brightness steps (in percentage).</li>
+<li><code>NOTIFY=&quot;yes&quot;</code> Send notification when setting the brightness.</li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+<li>Use <code>xbacklight -get</code> command to get the current brightness value, so you can set it at <code>DEFAULT_BR</code> as a default.</li>
+<li>Since <code>xbacklight -get</code> returns a floating point number (e.g. <code>17.989757</code>) you should <em>round</em> this value to make an integer (e.g. <code>18</code>), and use this number as a default (<code>DEFAULT_BR</code>)</li>
+<li><code>STEP_AMOUNT</code> will be added (increase/brigtness up) or substracted (decrease/brigtness down) from the current brightness value.</li>
+<li>The <code>NOTIFY</code> option works as a feedback (with <code>notify-send</code> command): it shows the new brightness value after setting the brightness. If you don&rsquo;t want a notification, just leave it empty (<code>NOTIFY=&quot;&quot;</code>).</li>
+</ul>
+
+<h4 id="example-keybinds-for-openbox:508a03f8c04b52a769d56187f3644413">Example keybinds for Openbox</h4>
+
+<p>If you are using Openbox as a Window Manager, you can copy&amp;paste these keybinds below into the Openbox key configuration file (<code>~/.config/openbox/rc.xml</code>), then reconfigure or restart Openbox (<code>openbox --reconfigure</code> or <code>openbox --restart</code>).</p>
+
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-Left&quot;</span>&gt;
+    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
+        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --down&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
+    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
+&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
+&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-Right&quot;</span>&gt;
+    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
+        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --up&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
+    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
+&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
+&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-KP_0&quot;</span>&gt;
+    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
+        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --default&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
+    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
+&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
+</pre></div>
+
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+<li>Make sure you configure the keybind keys for yourself.</li>
+<li>If you didn&rsquo;t copy <code>qxbacklight</code> to somewhere in your <code>$PATH</code> (see <code>Installation</code>), then you need to edit the <code>&lt;command&gt;</code> lines by setting the correct path to the script (for example: <code>&lt;command&gt;/path/to/qxbacklight --up&lt;/command&gt;</code>)</li>
+</ul>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+          <small>
+              Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a><br>Theme is based on <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+

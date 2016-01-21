@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Openbox on spcmd </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://spcmd.github.io/tags/openbox/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Mon, 16 Mar 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Obsnapper</title>
+      <link>http://spcmd.github.io/2015/03/16/obsnapper/</link>
+      <pubDate>Mon, 16 Mar 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://spcmd.github.io/2015/03/16/obsnapper/</guid>
+      <description>I made this bash script for window snapping function under Openbox. I made this for practicing bash and for my personal use. I don&amp;rsquo;t plan on taking feature requests or whatever. However, It works for me, so I decided to share this as a project. I&amp;rsquo;m using this script under Ubuntu 14.04 with Openbox 3.5.2 and tint2 0.11+svn20121014 at resolution 1366x768 and 1280x800. Features Window snapping to left and right Restoring window position or restoring window to a fixed position Dependencies xwininfo xprop wmctrl using a panel or dock with openbox Configurable options PANEL_NAME=&amp;quot;&amp;quot; (string ; name of the panel or dock ; for example: tint2) PANEL_ID=&amp;quot;&amp;quot; (string ; only if PANEL_NAME is not working ; for example: 0x40006b) PANEL_TYPE=&amp;quot;&amp;quot; (string ; options: left, top, bottom) PX_CORR_LPT= (integer ; some pixel correction, mainly beacause of borders ; you can use this when PANEL_TYPE is set to &amp;ldquo;left&amp;rdquo; ; for example: 2) RESTORE_BEHAVIOUR=&amp;quot;&amp;quot; (string ; options: dynamic, fixed) TOP_MARGIN= (integer ; margin from the top (in pixel), when RESTORE_BEHAVIOUR is set to &amp;ldquo;fixed&amp;rdquo; ; for example: 10) Notes: Do not use quotation marks (&amp;quot;&amp;quot;) with integer type options!</description>
+    </item>
+    
+  </channel>
+</rss>
+

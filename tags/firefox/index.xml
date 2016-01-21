@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Firefox on spcmd </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://spcmd.github.io/tags/firefox/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sat, 25 Apr 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Vimpv</title>
+      <link>http://spcmd.github.io/2015/04/25/vimpv/</link>
+      <pubDate>Sat, 25 Apr 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://spcmd.github.io/2015/04/25/vimpv/</guid>
+      <description>Vimpv is a javascript plugin for Vimperator which allows you to follow/open video urls with mpv. Tested on Youtube and Vimeo. Usage: The default key map is ;m You can map the default key to something else, for example, if you don&amp;rsquo;t use the mark command, you can map it to m in your ~/.vimperatorrc: nmap m ;m You can find the plugin in my dotfiles repo: https://github.com/spcmd/dotfiles/blob/master/vimperator/.vimperator/plugin/vimpv.js</description>
+    </item>
+    
+    <item>
+      <title>ignotifier-setbadge</title>
+      <link>http://spcmd.github.io/2015/04/25/ignotifier-setbadge/</link>
+      <pubDate>Sat, 25 Apr 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://spcmd.github.io/2015/04/25/ignotifier-setbadge/</guid>
+      <description>Since the Gmail Notifier (ignotifier) addon doesn&amp;rsquo;t allow us to change its icon badge color (and it cannot be styled via css), I made a simple bash script which allows us to change those colors. You can the find the script and the documentation on github: https://github.com/spcmd/ignotifier-setbadge</description>
+    </item>
+    
+    <item>
+      <title>Firefox &gt; mpv</title>
+      <link>http://spcmd.github.io/2015/03/17/firefox--mpv/</link>
+      <pubDate>Tue, 17 Mar 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://spcmd.github.io/2015/03/17/firefox--mpv/</guid>
+      <description>Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp;amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos. Update (2015.04.20.): added auto stop/play Spotify options. You can find the documentation and the instructions on the Github page: https://github.com/spcmd/firefox-mpv</description>
+    </item>
+    
+  </channel>
+</rss>
+

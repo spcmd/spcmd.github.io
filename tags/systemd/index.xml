@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Systemd on spcmd </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>http://spcmd.github.io/tags/systemd/</link>
+    <language>en-us</language>
+    
+    
+    <updated>Sun, 24 May 2015 00:00:00 UTC</updated>
+    
+    <item>
+      <title>Fix: Acer Laptop freezes with Arch Linux and other systemd based distros</title>
+      <link>http://spcmd.github.io/2015/05/24/fix-acer-laptop-freezes-with-arch-linux-and-other-systemd-based-distros/</link>
+      <pubDate>Sun, 24 May 2015 00:00:00 UTC</pubDate>
+      
+      <guid>http://spcmd.github.io/2015/05/24/fix-acer-laptop-freezes-with-arch-linux-and-other-systemd-based-distros/</guid>
+      <description>I had a problem with Arch-based (or systemd based?) distros with my Acer ES1-512 laptop. Every time I used systemctl suspend or pm-suspend the whole system just totally froze. Shutdown didn&amp;rsquo;t work either: the system was shut down, but the laptop didn&amp;rsquo;t turn off (screen backlight was on, and the fans were working too). I tried a bunch of kernels, systemd versions, different kernel parameters, but neither of them worked. A week ago I installed Arch again and played around with the BIOS settings (again).</description>
+    </item>
+    
+  </channel>
+</rss>
+
