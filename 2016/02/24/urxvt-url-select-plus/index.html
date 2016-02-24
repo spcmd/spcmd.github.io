@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>urxvt url-select-plus - spcmd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://spcmd.github.io/2016/02/24/urxvt-url-select-plus/">
+  <link rel="icon" type="image/png" href="http://spcmd.github.io/favicon.png">
+  
+  
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/basscss.css">
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/main.css">
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://spcmd.github.io" class="site-title">/home/spcmd</a>
+      <nav class="site-nav">
+      <a href="http://spcmd.github.io/tags">/tags</a>
+<a href="http://spcmd.github.io/about">/about</a>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">urxvt url-select-plus</h1>
+        <p class="post-meta">Feb 24, 2016
+      | Tags:&nbsp;
+        
+            
+            <a href="http://spcmd.github.io/tags/urxvt">urxvt</a>
+        
+      </p>
+ </div>
+      <article class="post-content">
+      <p>For urxvt there is a nice perl extension called <em>url-select</em>, written by <a href="https://github.com/muennich/urxvt-perls">Bert Muennich</a>. It was fine until I needed a few more options, especially an option for opening the selected url in an <em>alternative</em> browser. So I made a slight modification: added an option for it, then added another option for opening the selected url with a media player, which is useful for youtube or some other video links. I renamed this modified script to <em>url-select-plus</em> to avoid naming conflicts.</p>
+
+<p>Now I can use these options in my .Xresources file:</p>
+
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">URxvt.url-select-plus.altlauncher: chromium
+URxvt.url-select-plus.mediaplayer: mpv
+</pre></div>
+
+
+<p>Then I can hit <code>O</code> (Shift+o) to open the selected link in the alternative browser, which for me is Chromium.
+If it&rsquo;s a youtube link, then I can hit <code>m</code> on the link and it will open the video in mpv. Of course, you can use it with another media player (mplayer, for example), just make sure you have <a href="https://github.com/rg3/youtube-dl">youtube-dl</a> installed.</p>
+
+<p>You can find this extension in my dotfiles repo: <strong><a href="https://github.com/spcmd/dotfiles/blob/master/urxvt/.urxvt/url-select-plus">url-select-plus</a></strong></p>
+
+<p>If you use this instead of the original url-select, don&rsquo;t forget to modify the names for other options too in the .Xresources file:</p>
+
+<p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">URxvt.keysym.M-f: perl:url-select-plus:select_next
+URxvt.url-select-plus.launcher: firefox 
+URxvt.url-select-plus.altlauncher: chromium
+URxvt.url-select-plus.mediaplayer: mpv
+URxvt.url-select-plus.button: 1
+URxvt.url-select-plus.underline: true
+</pre></div>
+</p>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+          <small>
+              Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a><br>Theme is based on <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+

@@ -7,7 +7,34 @@
     <language>en-us</language>
     
     
-    <updated>Thu, 21 Jan 2016 11:19:45 CET</updated>
+    <updated>Wed, 24 Feb 2016 15:20:00 CET</updated>
+    
+    <item>
+      <title>Run terminal applications from dmenu with their Xresources name</title>
+      <link>http://spcmd.github.io/2016/02/24/run-terminal-applications-from-dmenu-with-their-xresources-name/</link>
+      <pubDate>Wed, 24 Feb 2016 15:20:00 CET</pubDate>
+      
+      <guid>http://spcmd.github.io/2016/02/24/run-terminal-applications-from-dmenu-with-their-xresources-name/</guid>
+      <description>If you are using dmenu, you might want to run terminal applications from it. I&amp;rsquo;ve found an old post about a modified dmenu_run script in the Arch Linux Forums, in the Dmenu Hacking Thread: #45. It worked fine, but I&amp;rsquo;m using urxvt with .Xresources color definitions for some apps. So I modded that script a bit to use the .Xresources name when it&amp;rsquo;s given. For that to work, you need to create list with the names of the apps in ~/.dmenu_term_apps, for example: $cat ~/.dmenu_term_apps htop alsamixer ranger -name ranger mocp -name moc newsbeuter -name newsbeuter rtorrent -name rTorrent If the -name &amp;lt;name&amp;gt; was given, the app will use its own Xresources settings, otherwise it will use the default settings.</description>
+    </item>
+    
+    <item>
+      <title>dmenu2 modding</title>
+      <link>http://spcmd.github.io/2016/02/24/dmenu2-modding/</link>
+      <pubDate>Wed, 24 Feb 2016 15:00:32 CET</pubDate>
+      
+      <guid>http://spcmd.github.io/2016/02/24/dmenu2-modding/</guid>
+      <description>About a month ago I started using dmenu (dmenu2, precisely), but I didn&amp;rsquo;t like the behaviour of the TAB key (completion). I wanted it to behave like Vimperator: TAB key to select the next element, Shift+TAB to select the previous. So I modified the dmenu.c file in the source and now it works the way I wanted. If you like this TAB behaviour better, you can get this modified version from my dmenu2 repository.</description>
+    </item>
+    
+    <item>
+      <title>urxvt url-select-plus</title>
+      <link>http://spcmd.github.io/2016/02/24/urxvt-url-select-plus/</link>
+      <pubDate>Wed, 24 Feb 2016 13:36:01 CET</pubDate>
+      
+      <guid>http://spcmd.github.io/2016/02/24/urxvt-url-select-plus/</guid>
+      <description>For urxvt there is a nice perl extension called url-select, written by Bert Muennich. It was fine until I needed a few more options, especially an option for opening the selected url in an alternative browser. So I made a slight modification: added an option for it, then added another option for opening the selected url with a media player, which is useful for youtube or some other video links. I renamed this modified script to url-select-plus to avoid naming conflicts.</description>
+    </item>
     
     <item>
       <title>Blog update</title>

@@ -42,6 +42,120 @@
                             
                                 
 <div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2016/02/24/run-terminal-applications-from-dmenu-with-their-xresources-name/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Run terminal applications from dmenu with their Xresources name </h3>
+  </a>
+  <p class="post-meta">Feb 24, 2016
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/dmenu">dmenu</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/urxvt">urxvt</a>
+  </p>
+  <p class="post-content">
+    
+    <p>If you are using dmenu, you might want to run terminal applications from it. I&rsquo;ve found an old post about a modified <strong>dmenu_run</strong> script in the Arch Linux Forums, in the Dmenu Hacking Thread: <a href="https://bbs.archlinux.org/viewtopic.php?pid=1088164#p1088164">#45</a>. It worked fine, but I&rsquo;m using urxvt with .Xresources color definitions for some apps.</p>
+
+<p>So I modded that script a bit to use the .Xresources name when it&rsquo;s given. For that to work, you need to create list with the names of the apps in <code>~/.dmenu_term_apps</code>, for example:</p>
+
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">$cat ~/.dmenu_term_apps
+
+htop
+alsamixer
+ranger -name ranger
+mocp -name moc
+newsbeuter -name newsbeuter
+rtorrent -name rTorrent
+</pre></div>
+
+
+<p>If the <code>-name &lt;name&gt;</code> was given, the app will use its own Xresources settings, otherwise it will use the default settings.</p>
+
+<p>You can find this modified script in my Scripts repo: <strong><a href="https://github.com/spcmd/Scripts/blob/master/dmenu_run">dmenu_run</a></strong></p>
+
+    
+   </p>
+</div>
+
+                            
+                        
+                            
+                                
+<div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2016/02/24/dmenu2-modding/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">dmenu2 modding </h3>
+  </a>
+  <p class="post-meta">Feb 24, 2016
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/dmenu">dmenu</a>
+  </p>
+  <p class="post-content">
+    
+    <p>About a month ago I started using dmenu (<a href="https://bitbucket.org/melek/dmenu2">dmenu2</a>, precisely), but I didn&rsquo;t like the behaviour of the TAB key (completion). I wanted it to behave like <a href="https://addons.mozilla.org/en-US/firefox/addon/vimperator/">Vimperator</a>: TAB key to select the next element, Shift+TAB to select the previous. So I modified the dmenu.c file in the source and now it works the way I wanted.</p>
+
+<p>If you like this TAB behaviour better, you can get this modified version from my <a href="https://github.com/spcmd/dmenu2">dmenu2 repository</a>.</p>
+
+    
+   </p>
+</div>
+
+                            
+                        
+                            
+                                
+<div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2016/02/24/urxvt-url-select-plus/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">urxvt url-select-plus </h3>
+  </a>
+  <p class="post-meta">Feb 24, 2016
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/urxvt">urxvt</a>
+  </p>
+  <p class="post-content">
+    
+    <p>For urxvt there is a nice perl extension called <em>url-select</em>, written by <a href="https://github.com/muennich/urxvt-perls">Bert Muennich</a>. It was fine until I needed a few more options, especially an option for opening the selected url in an <em>alternative</em> browser. So I made a slight modification: added an option for it, then added another option for opening the selected url with a media player, which is useful for youtube or some other video links. I renamed this modified script to <em>url-select-plus</em> to avoid naming conflicts.</p>
+
+<p>Now I can use these options in my .Xresources file:</p>
+
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">URxvt.url-select-plus.altlauncher: chromium
+URxvt.url-select-plus.mediaplayer: mpv
+</pre></div>
+
+
+<p>Then I can hit <code>O</code> (Shift+o) to open the selected link in the alternative browser, which for me is Chromium.
+If it&rsquo;s a youtube link, then I can hit <code>m</code> on the link and it will open the video in mpv. Of course, you can use it with another media player (mplayer, for example), just make sure you have <a href="https://github.com/rg3/youtube-dl">youtube-dl</a> installed.</p>
+
+<p>You can find this extension in my dotfiles repo: <strong><a href="https://github.com/spcmd/dotfiles/blob/master/urxvt/.urxvt/url-select-plus">url-select-plus</a></strong></p>
+
+<p>If you use this instead of the original url-select, don&rsquo;t forget to modify the names for other options too in the .Xresources file:</p>
+
+<p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">URxvt.keysym.M-f: perl:url-select-plus:select_next
+URxvt.url-select-plus.launcher: firefox 
+URxvt.url-select-plus.altlauncher: chromium
+URxvt.url-select-plus.mediaplayer: mpv
+URxvt.url-select-plus.button: 1
+URxvt.url-select-plus.underline: true
+</pre></div>
+</p>
+
+    
+   </p>
+</div>
+
+                            
+                        
+                            
+                                
+<div class="post">
   <a class="post-link" href="http://spcmd.github.io/2016/01/21/blog-update/">
   <div class="clearfix"></div>
   <h3 class="h2 post-title">Blog update </h3>
@@ -301,189 +415,6 @@ I also cleaned up a bit, removed some old, obsolete posts. I hope I can write so
 <ul>
 <li>Make sure you configure the keybind keys for yourself.</li>
 <li>If you didn&rsquo;t copy <code>qxbacklight</code> to somewhere in your <code>$PATH</code> (see <code>Installation</code>), then you need to edit the <code>&lt;command&gt;</code> lines by setting the correct path to the script (for example: <code>&lt;command&gt;/path/to/qxbacklight --up&lt;/command&gt;</code>)</li>
-</ul>
-
-    
-   </p>
-</div>
-
-                            
-                        
-                            
-                                
-<div class="post">
-  <a class="post-link" href="http://spcmd.github.io/2015/03/17/firefox--mpv/">
-  <div class="clearfix"></div>
-  <h3 class="h2 post-title">Firefox &gt; mpv </h3>
-  </a>
-  <p class="post-meta">Mar 17, 2015
-  | Tags:&nbsp;
-  
-      
-      <a href="http://spcmd.github.io/tags/vim">vim</a>
-  
-      ,&nbsp;
-      <a href="http://spcmd.github.io/tags/vimperator">vimperator</a>
-  
-      ,&nbsp;
-      <a href="http://spcmd.github.io/tags/firefox">firefox</a>
-  
-      ,&nbsp;
-      <a href="http://spcmd.github.io/tags/mpv">mpv</a>
-  </p>
-  <p class="post-content">
-    
-    <p>Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos.</p>
-
-<p><strong>Update</strong> (2015.04.20.): added auto stop/play Spotify options.</p>
-
-<p>You can find the documentation and the instructions on the Github page:</p>
-
-<p><a href="https://github.com/spcmd/firefox-mpv">https://github.com/spcmd/firefox-mpv</a></p>
-
-    
-   </p>
-</div>
-
-                            
-                        
-                            
-                                
-<div class="post">
-  <a class="post-link" href="http://spcmd.github.io/2015/03/16/obsnapper/">
-  <div class="clearfix"></div>
-  <h3 class="h2 post-title">Obsnapper </h3>
-  </a>
-  <p class="post-meta">Mar 16, 2015
-  | Tags:&nbsp;
-  
-      
-      <a href="http://spcmd.github.io/tags/openbox">openbox</a>
-  </p>
-  <p class="post-content">
-    
-    
-
-<p>I made this bash script for window snapping function under Openbox. I made this for practicing bash and for my personal use. I don&rsquo;t plan on taking feature requests or whatever. However, It works for me, so I decided to share this as a project.</p>
-
-<p>I&rsquo;m using this script under <em>Ubuntu 14.04</em> with <em>Openbox 3.5.2</em> and <em>tint2 0.11+svn20121014</em> at resolution 1366x768 and 1280x800.</p>
-
-<h4 id="features:e8b5fc19a6378586f6b5e0552d32b95d">Features</h4>
-
-<ul>
-<li>Window snapping to left and right</li>
-<li>Restoring window position or restoring window to a fixed position</li>
-</ul>
-
-<h4 id="dependencies:e8b5fc19a6378586f6b5e0552d32b95d">Dependencies</h4>
-
-<ul>
-<li>xwininfo</li>
-<li>xprop</li>
-<li>wmctrl</li>
-<li>using a panel or dock with openbox</li>
-</ul>
-
-<h4 id="configurable-options:e8b5fc19a6378586f6b5e0552d32b95d">Configurable options</h4>
-
-<ul>
-<li><code>PANEL_NAME=&quot;&quot;</code> (<em>string</em> ; name of the panel or dock ; for example: <strong>tint2</strong>)</li>
-<li><code>PANEL_ID=&quot;&quot;</code> (<em>string</em> ; only if PANEL_NAME is not working ; for example: <strong>0x40006b</strong>)</li>
-<li><code>PANEL_TYPE=&quot;&quot;</code> (<em>string</em> ; options: <code>left</code>, <code>top</code>, <code>bottom</code>)</li>
-<li><code>PX_CORR_LPT=</code> (<em>integer</em> ; some pixel correction, mainly beacause of borders ; you can use this when PANEL_TYPE is set to &ldquo;left&rdquo; ; for example: <strong>2</strong>)</li>
-<li><code>RESTORE_BEHAVIOUR=&quot;&quot;</code> (<em>string</em> ; options: <code>dynamic</code>, <code>fixed</code>)</li>
-
-<li><p><code>TOP_MARGIN=</code> (<em>integer</em> ; margin from the top (in pixel), when RESTORE_BEHAVIOUR is set to &ldquo;fixed&rdquo; ; for example: <strong>10</strong>)</p></li>
-
-<li><p><strong>Notes:</strong></p>
-
-<ul>
-<li>Do not use quotation marks (<code>&quot;&quot;</code>) with <em>integer</em> type options!</li>
-<li>Run <code>xwininfo</code> in terminal, then click on the panel/dock to get the <code>PANEL_NAME</code> and other window informations.</li>
-</ul></li>
-</ul>
-
-<h4 id="installation:e8b5fc19a6378586f6b5e0552d32b95d">Installation</h4>
-
-<ol>
-<li>Clone this script (<code>git clone https://github.com/spcmd/Obsnapper.git</code>) or <a href="https://github.com/spcmd/Obsnapper">download from Github</a> and copy it to somewhere in your <code>$PATH</code> (for example: <code>~/bin</code> or <code>/usr/bin</code>) or copy wherever you like, then give the full path to the script when using it.</li>
-<li>Make it executable (for example: <code>chmod +x /path/to/obsnapper</code>)</li>
-<li>Open the script with a text editor and configure the options (see <code>Configurable options</code> and the detailed comments in the script).</li>
-<li>Create keybinds for the snapping functions in the Openbox key configuration file (<code>~/.config/openbox/rc.xml</code>), then restart Openbox (<code>openbox --restart</code>).</li>
-</ol>
-
-<h4 id="example-keybinds:e8b5fc19a6378586f6b5e0552d32b95d">Example keybinds</h4>
-
-<p>For snapping to left with <code>Super+Left</code> and to right with <code>Super+Right</code>, you can copy&amp;paste these keybinds below into <code>~/.config/openbox/rc.xml</code> if you copied the Obsnapper script somewhere in your <code>$PATH</code>. To restore active window, simply hit one of these key combinations again.</p>
-
-<p>If the Obsnapper script <strong>wasn&rsquo;t</strong> copied to somewhere in your <code>$PATH</code>, you <strong>need</strong> to change the <code>&lt;command&gt;</code> lines to use the full path (for example <code>&lt;command&gt;/path/to/obsnapper --snapleft&lt;/command&gt;</code>)</p>
-
-<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">  <span style="color: #0099FF; font-style: italic">&lt;!-- Window snap Left --&gt;</span>
-    &lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;W-Left&quot;</span>&gt;
-      &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;If&quot;</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;yes&lt;/<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;no&lt;/<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">then</span>&gt;
-          &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;obsnapper --restore&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
-          &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-        &lt;/<span style="color: #330099; font-weight: bold">then</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">else</span>&gt;
-          &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;If&quot;</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;no&lt;/<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;no&lt;/<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">then</span>&gt;
-              &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
-                &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;obsnapper --snapleft&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
-              &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-            &lt;/<span style="color: #330099; font-weight: bold">then</span>&gt;
-          &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-        &lt;/<span style="color: #330099; font-weight: bold">else</span>&gt;
-      &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-    &lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
-    <span style="color: #0099FF; font-style: italic">&lt;!-- Window snap Right --&gt;</span>
-    &lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;W-Right&quot;</span>&gt;
-      &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;If&quot;</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;yes&lt;/<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;no&lt;/<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">then</span>&gt;
-          &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;obsnapper --restore&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
-          &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-        &lt;/<span style="color: #330099; font-weight: bold">then</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">else</span>&gt;
-          &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;If&quot;</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;no&lt;/<span style="color: #330099; font-weight: bold">maximizedvertical</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;no&lt;/<span style="color: #330099; font-weight: bold">maximizedhorizontal</span>&gt;
-            &lt;<span style="color: #330099; font-weight: bold">then</span>&gt;
-              &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
-                &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;obsnapper --snapright&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
-              &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-            &lt;/<span style="color: #330099; font-weight: bold">then</span>&gt;
-          &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-        &lt;/<span style="color: #330099; font-weight: bold">else</span>&gt;
-      &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-    &lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
-</pre></div>
-
-
-<h4 id="command-line-options:e8b5fc19a6378586f6b5e0552d32b95d">Command line options</h4>
-
-<ul>
-<li><code>obsnapper --help</code>  List available options.</li>
-<li><code>obsnapper --check</code> Check for configuration errors.</li>
-<li><code>obsnapper --snapleft</code> Snap window to left</li>
-<li><code>obsnapper --snapright</code> Snap window to right</li>
-<li><code>obsnapper --restore</code> Restore window position</li>
-
-<li><p><code>obsnapper --version</code> , <code>obsnapper -v</code> Version information</p></li>
-
-<li><p>Notes:</p>
-
-<ul>
-<li>You can use one command at a time, but you can chain commands  with <code>&amp;&amp;</code> if you like (for example: <code>obsnapper --snapleft &amp;&amp; obsnapper --restore</code>)</li>
-<li>A <code>--restore</code> should always follow a snap to get the script work properly.<br /></li>
-</ul></li>
 </ul>
 
     

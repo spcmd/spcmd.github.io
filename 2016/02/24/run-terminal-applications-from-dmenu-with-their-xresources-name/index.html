@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Run terminal applications from dmenu with their Xresources name - spcmd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://spcmd.github.io/2016/02/24/run-terminal-applications-from-dmenu-with-their-xresources-name/">
+  <link rel="icon" type="image/png" href="http://spcmd.github.io/favicon.png">
+  
+  
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/basscss.css">
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/main.css">
+</head>
+<body class="">
+
+<div class="site-wrap">
+  <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://spcmd.github.io" class="site-title">/home/spcmd</a>
+      <nav class="site-nav">
+      <a href="http://spcmd.github.io/tags">/tags</a>
+<a href="http://spcmd.github.io/about">/about</a>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+  <div class="post p2 p-responsive wrap" role="main">
+    <div class="measure">
+      <div class="post-header mb2">
+        <h1 class="py2">Run terminal applications from dmenu with their Xresources name</h1>
+        <p class="post-meta">Feb 24, 2016
+      | Tags:&nbsp;
+        
+            
+            <a href="http://spcmd.github.io/tags/dmenu">dmenu</a>
+        
+            ,&nbsp;
+            <a href="http://spcmd.github.io/tags/urxvt">urxvt</a>
+        
+      </p>
+ </div>
+      <article class="post-content">
+      <p>If you are using dmenu, you might want to run terminal applications from it. I&rsquo;ve found an old post about a modified <strong>dmenu_run</strong> script in the Arch Linux Forums, in the Dmenu Hacking Thread: <a href="https://bbs.archlinux.org/viewtopic.php?pid=1088164#p1088164">#45</a>. It worked fine, but I&rsquo;m using urxvt with .Xresources color definitions for some apps.</p>
+
+<p>So I modded that script a bit to use the .Xresources name when it&rsquo;s given. For that to work, you need to create list with the names of the apps in <code>~/.dmenu_term_apps</code>, for example:</p>
+
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">$cat ~/.dmenu_term_apps
+
+htop
+alsamixer
+ranger -name ranger
+mocp -name moc
+newsbeuter -name newsbeuter
+rtorrent -name rTorrent
+</pre></div>
+
+
+<p>If the <code>-name &lt;name&gt;</code> was given, the app will use its own Xresources settings, otherwise it will use the default settings.</p>
+
+<p>You can find this modified script in my Scripts repo: <strong><a href="https://github.com/spcmd/Scripts/blob/master/dmenu_run">dmenu_run</a></strong></p>
+
+      </article>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+          <small>
+              Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a><br>Theme is based on <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+
