@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>spcmd - spcmd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="http://spcmd.github.io/">
+  <link rel="icon" type="image/png" href="http://spcmd.github.io/favicon.png">
+  
+  
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/basscss.css">
+  <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/main.css">
+</head>
+<body class="">
+
+<div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://spcmd.github.io" class="site-title">/home/spcmd</a>
+      <nav class="site-nav">
+      <a href="http://spcmd.github.io/tags">/tags</a>
+<a href="http://spcmd.github.io/about">/about</a>
+
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</header>
+
+    
+    <div class="post p2 p-responsive wrap" role="main">
+        <div class="measure">
+            <div class="home">
+                <div class="posts">
+                    
+                        
+                        
+                            
+<div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2015/05/24/fix-acer-laptop-freezes-with-arch-linux-and-other-systemd-based-distros/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Fix: Acer Laptop freezes with Arch Linux and other systemd based distros </h3>
+  </a>
+  <p class="post-meta">May 24, 2015
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/arch">arch</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/systemd">systemd</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/fix">fix</a>
+  </p>
+  <p class="post-content">
+    
+    <p>I had a problem with Arch-based (or systemd based?) distros with my Acer ES1-512 laptop. Every time I used <code>systemctl suspend</code> or <code>pm-suspend</code> the whole system just totally froze. Shutdown didn&rsquo;t work either: the system was shut down, but the laptop didn&rsquo;t turn off (screen backlight was on, and the fans were working too). I tried a bunch of kernels, systemd versions, different kernel parameters, but neither of them worked.</p>
+
+<p>A week ago I installed Arch again and played around with the BIOS settings (again). Then I&rsquo;ve found the source of the problem, or at least I think: I had to <strong>disable the xHCI support</strong> (External USB 3.0 controller) in the BIOS settings. After I disabled it, the freezes were stopped, my Acer laptop started to work properly. Shutdown works too.</p>
+
+<p>I answered a question about this in the Arch Linux forums too: <a href="https://bbs.archlinux.org/viewtopic.php?pid=1529860#p1529860">Acer Aspire E13 : Suspend/Poweroff don&rsquo;t Work</a></p>
+
+<p><strong>UPDATE:</strong> The problem exists with Debian 8 &ldquo;Jessie&rdquo; too, so it seems it&rsquo;s not Arch-specific, rather systemd-specific, I think. The solution should work with Debian (or with other systemd based distros) too.</p>
+
+    
+   </p>
+</div>
+
+                        
+                            
+<div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2015/04/25/ignotifier-setbadge/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">ignotifier-setbadge </h3>
+  </a>
+  <p class="post-meta">Apr 25, 2015
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/firefox">firefox</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/gmail">gmail</a>
+  </p>
+  <p class="post-content">
+    
+    <p>Since the <a href="https://addons.mozilla.org/en-US/firefox/addon/gmail-notifier-restartless">Gmail Notifier (ignotifier)</a> addon doesn&rsquo;t allow us to change its icon badge color (and it cannot be styled via css), I made a simple bash script which allows us to change those colors.</p>
+
+<p><img src="/img/ignotifier-setbadge.png" alt="" /></p>
+
+<p>You can the find the script and the documentation on github:</p>
+
+<p><a href="https://github.com/spcmd/ignotifier-setbadge">https://github.com/spcmd/ignotifier-setbadge</a></p>
+
+    
+   </p>
+</div>
+
+                        
+                            
+<div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2015/04/25/vimpv/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Vimpv </h3>
+  </a>
+  <p class="post-meta">Apr 25, 2015
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/vim">vim</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/vimperator">vimperator</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/firefox">firefox</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/mpv">mpv</a>
+  </p>
+  <p class="post-content">
+    
+    <p>Vimpv is a javascript plugin for <a href="https://addons.mozilla.org/en-US/firefox/addon/vimperator/">Vimperator</a> which allows you to follow/open video urls with <a href="http://mpv.io">mpv</a>. Tested on Youtube and Vimeo.</p>
+
+<p><strong>Usage:</strong></p>
+
+<p>The default key map is <code>;m</code></p>
+
+<p>You can map the default key to something else, for example, if you don&rsquo;t use the <strong>mark</strong> command, you can map it to <code>m</code> in your <code>~/.vimperatorrc</code>:</p>
+
+<p><code>nmap m ;m</code></p>
+
+<p>You can find the plugin in my dotfiles repo:</p>
+
+<p><a href="https://github.com/spcmd/dotfiles/blob/master/vimperator/.vimperator/plugin/vimpv.js">https://github.com/spcmd/dotfiles/blob/master/vimperator/.vimperator/plugin/vimpv.js</a></p>
+
+    
+   </p>
+</div>
+
+                        
+                            
+<div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2015/04/11/vim-easy-todo/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">Vim Easy TODO </h3>
+  </a>
+  <p class="post-meta">Apr 11, 2015
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/vim">vim</a>
+  </p>
+  <p class="post-content">
+    
+    <p>Today I released my very first Vim plugin called <strong>Vim Easy TODO</strong>. I&rsquo;m using Vim for about 3 weeks now, and I like it a lot. I still have a lot to learn, but I&rsquo;m looking forward to it. I needed some To-do list plugin like <a href="https://github.com/aziz/PlainTasks">PlainTasks</a> for Sublime Text. But I didn&rsquo;t want to use some &ldquo;heavy&rdquo; plugin, I just needed to have some basic, formatted/colorized To-do list. So I decided to write it for myself. It&rsquo;s not perfect, but it does the job. It has some basic customization feature, but not too much. Keep it simple and stupid, you now. :)</p>
+
+<p><strong>Vim Easy TODO</strong> is a simple &amp; easy to use &lsquo;To-do list&rsquo; plugin for - of course - Vim. For those who need only some basic functionality when creating To-do lists.</p>
+
+<p><img src="/img/vim-easy-todo.png" alt="vim-easy-todo" /></p>
+
+<p>If you interested, please visit the project&rsquo;s page on github:</p>
+
+<p><a href="https://github.com/spcmd/vim-easy-todo">https://github.com/spcmd/vim-easy-todo</a></p>
+
+    
+   </p>
+</div>
+
+                        
+                            
+<div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2015/03/20/qxbacklight/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">qxbacklight </h3>
+  </a>
+  <p class="post-meta">Mar 20, 2015
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/backlight">backlight</a>
+  </p>
+  <p class="post-content">
+    
+    
+
+<p>A bash script for setting the brightness with <code>xbacklight</code> <strong>q</strong>uickly.</p>
+
+<h4 id="dependencies:508a03f8c04b52a769d56187f3644413">Dependencies</h4>
+
+<ul>
+<li>xbacklight</li>
+</ul>
+
+<h4 id="installation:508a03f8c04b52a769d56187f3644413">Installation</h4>
+
+<ol>
+<li>Clone the repository (<code>https://github.com/spcmd/qxbacklight.git</code>) or <a href="https://github.com/spcmd/qxbacklight">download from Github</a>.</li>
+<li>Copy <code>qxbacklight</code> to somewhere in your <code>$PATH</code> (for example: <code>~/bin</code>) or copy wherever you like, then give the full path to the script when using it.</li>
+<li>Make it executable (for example: <code>chmod +x /path/to/qxbacklight</code>)</li>
+<li>Open the script with a text editor and configure the options (see <code>Configurable Options</code> and the detailed comments in the script).</li>
+<li>Create keybinds for the <code>qxbacklight</code> commands (see <code>Commands</code>)</li>
+</ol>
+
+<h4 id="commands:508a03f8c04b52a769d56187f3644413">Commands</h4>
+
+<ul>
+<li><code>qxbacklight --help</code>  Help &amp; basic information.</li>
+<li><code>qxbacklight --up</code>  Increase brightness.</li>
+<li><code>qxbacklight --down</code>  Decrease brightness.</li>
+<li><code>qxbacklight --default</code>  Set brightness value to default.</li>
+</ul>
+
+<h4 id="configurable-options:508a03f8c04b52a769d56187f3644413">Configurable Options</h4>
+
+<p><strong>Strongly recommended</strong> to configure these options for yourself!
+<br>I left my values as a default (for reference: I&rsquo;m using a Notebook with LED LCD display, which is very bright, so my values are relatively low).</p>
+
+<ul>
+<li><code>DEFAULT_BR=18</code> Default brightness (in percentage).</li>
+<li><code>STEP_AMOUNT=2</code> Decrease/increase brightness steps (in percentage).</li>
+<li><code>NOTIFY=&quot;yes&quot;</code> Send notification when setting the brightness.</li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+<li>Use <code>xbacklight -get</code> command to get the current brightness value, so you can set it at <code>DEFAULT_BR</code> as a default.</li>
+<li>Since <code>xbacklight -get</code> returns a floating point number (e.g. <code>17.989757</code>) you should <em>round</em> this value to make an integer (e.g. <code>18</code>), and use this number as a default (<code>DEFAULT_BR</code>)</li>
+<li><code>STEP_AMOUNT</code> will be added (increase/brigtness up) or substracted (decrease/brigtness down) from the current brightness value.</li>
+<li>The <code>NOTIFY</code> option works as a feedback (with <code>notify-send</code> command): it shows the new brightness value after setting the brightness. If you don&rsquo;t want a notification, just leave it empty (<code>NOTIFY=&quot;&quot;</code>).</li>
+</ul>
+
+<h4 id="example-keybinds-for-openbox:508a03f8c04b52a769d56187f3644413">Example keybinds for Openbox</h4>
+
+<p>If you are using Openbox as a Window Manager, you can copy&amp;paste these keybinds below into the Openbox key configuration file (<code>~/.config/openbox/rc.xml</code>), then reconfigure or restart Openbox (<code>openbox --reconfigure</code> or <code>openbox --restart</code>).</p>
+
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-Left&quot;</span>&gt;
+    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
+        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --down&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
+    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
+&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
+&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-Right&quot;</span>&gt;
+    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
+        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --up&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
+    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
+&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
+&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-KP_0&quot;</span>&gt;
+    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
+        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --default&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
+    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
+&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
+</pre></div>
+
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+<li>Make sure you configure the keybind keys for yourself.</li>
+<li>If you didn&rsquo;t copy <code>qxbacklight</code> to somewhere in your <code>$PATH</code> (see <code>Installation</code>), then you need to edit the <code>&lt;command&gt;</code> lines by setting the correct path to the script (for example: <code>&lt;command&gt;/path/to/qxbacklight --up&lt;/command&gt;</code>)</li>
+</ul>
+
+    
+   </p>
+</div>
+
+                        
+                </div>
+            </div>
+            <div class="paginatin_area">
+                        <div class="pagination clearfix mb1 mt4">
+  <div class="left">
+  
+  
+  <a class="pagination-item" href="http://spcmd.github.io">←Newer posts</a>
+  
+  
+  </div>
+  <div class="right">
+  
+  <a class="pagination-item" href="/page/3/">Older posts→</a>
+  
+  </div>
+</div>
+
+                
+            </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <footer class="footer">
+      <div class="p2 wrap">
+        <div class="measure mt1 center">
+          <small>
+              Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a><br>Theme is based on <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
+          </small>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+
