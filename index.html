@@ -42,6 +42,44 @@
                             
                                 
 <div class="post">
+  <a class="post-link" href="http://spcmd.github.io/2016/02/29/spotymenu-control-spotify-via-dmenu/">
+  <div class="clearfix"></div>
+  <h3 class="h2 post-title">spotymenu: control spotify via dmenu </h3>
+  </a>
+  <p class="post-meta">Feb 29, 2016
+  | Tags:&nbsp;
+  
+      
+      <a href="http://spcmd.github.io/tags/spotify">spotify</a>
+  
+      ,&nbsp;
+      <a href="http://spcmd.github.io/tags/dmenu">dmenu</a>
+  </p>
+  <p class="post-content">
+    
+    <p>I while ago it became a pain in the ass for me to select and arrange albums with Spotify&rsquo;s GUI. It&rsquo;s slow, feels heavy and bloated. I wanted something quicker and easier to use, especially something what I can control with the keyboard. I know there is <a href="https://github.com/mopidy/mopidy-spotify">mopidy-spotify</a> and other libspotify based applications too, but those work only with premium accounts.</p>
+
+<p>I&rsquo;ve found a bunch of scripts, but those only do basic Spotify controls via dbus (play/pause, prev/next etc.). I have my own script which does the same, I needed something more &ldquo;powerful&rdquo;.</p>
+
+<p>One day I&rsquo;ve started using dmenu and the idea had came to me: I should use this nice little software for this job! Then I wrote a little <a href="https://github.com/spcmd/Scripts/blob/master/spotify-album-export">album export script</a>, and after that I&rsquo;ve started to work on spotymenu.</p>
+
+<p><img src="/img/spotymenu_album_list.png" alt="" /></p>
+
+<p>Long story short: It&rsquo;s still a very simple and basic bash script, definitely <em>not</em> a GUI replacement, the GUI still needs to run, but at least it works with non-premium accounts and this way I can have my album list exported to a local plain text file in the first place.</p>
+
+<p>If you are interested, check out my repository where you can find a detailed README too: <strong><a href="https://github.com/spcmd/spotymenu">spotymenu</a></strong></p>
+
+<p><img src="/img/spotymenu_tracklist.png" alt="" /></p>
+
+    
+   </p>
+</div>
+
+                            
+                        
+                            
+                                
+<div class="post">
   <a class="post-link" href="http://spcmd.github.io/2016/02/24/run-terminal-applications-from-dmenu-with-their-xresources-name/">
   <div class="clearfix"></div>
   <h3 class="h2 post-title">Run terminal applications from dmenu with their Xresources name </h3>
@@ -61,7 +99,7 @@
 
 <p>So I modded that script a bit to use the .Xresources name when it&rsquo;s given. For that to work, you need to create list with the names of the apps in <code>~/.dmenu_term_apps</code>, for example:</p>
 
-<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">$cat ~/.dmenu_term_apps
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>$cat ~/.dmenu_term_apps
 
 htop
 alsamixer
@@ -126,7 +164,7 @@ rtorrent -name rTorrent
 
 <p>Now I can use these options in my .Xresources file:</p>
 
-<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">URxvt.url-select-plus.altlauncher: chromium
+<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>URxvt.url-select-plus.altlauncher: chromium
 URxvt.url-select-plus.mediaplayer: mpv
 </pre></div>
 
@@ -138,7 +176,7 @@ If it&rsquo;s a youtube link, then I can hit <code>m</code> on the link and it w
 
 <p>If you use this instead of the original url-select, don&rsquo;t forget to modify the names for other options too in the .Xresources file:</p>
 
-<p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">URxvt.keysym.M-f: perl:url-select-plus:select_next
+<p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>URxvt.keysym.M-f: perl:url-select-plus:select_next
 URxvt.url-select-plus.launcher: firefox 
 URxvt.url-select-plus.altlauncher: chromium
 URxvt.url-select-plus.mediaplayer: mpv
@@ -322,105 +360,6 @@ I also cleaned up a bit, removed some old, obsolete posts. I hope I can write so
 
                             
                         
-                            
-                        
-                            
-                                
-<div class="post">
-  <a class="post-link" href="http://spcmd.github.io/2015/03/20/qxbacklight/">
-  <div class="clearfix"></div>
-  <h3 class="h2 post-title">qxbacklight </h3>
-  </a>
-  <p class="post-meta">Mar 20, 2015
-  | Tags:&nbsp;
-  
-      
-      <a href="http://spcmd.github.io/tags/backlight">backlight</a>
-  </p>
-  <p class="post-content">
-    
-    
-
-<p>A bash script for setting the brightness with <code>xbacklight</code> <strong>q</strong>uickly.</p>
-
-<h4 id="dependencies:508a03f8c04b52a769d56187f3644413">Dependencies</h4>
-
-<ul>
-<li>xbacklight</li>
-</ul>
-
-<h4 id="installation:508a03f8c04b52a769d56187f3644413">Installation</h4>
-
-<ol>
-<li>Clone the repository (<code>https://github.com/spcmd/qxbacklight.git</code>) or <a href="https://github.com/spcmd/qxbacklight">download from Github</a>.</li>
-<li>Copy <code>qxbacklight</code> to somewhere in your <code>$PATH</code> (for example: <code>~/bin</code>) or copy wherever you like, then give the full path to the script when using it.</li>
-<li>Make it executable (for example: <code>chmod +x /path/to/qxbacklight</code>)</li>
-<li>Open the script with a text editor and configure the options (see <code>Configurable Options</code> and the detailed comments in the script).</li>
-<li>Create keybinds for the <code>qxbacklight</code> commands (see <code>Commands</code>)</li>
-</ol>
-
-<h4 id="commands:508a03f8c04b52a769d56187f3644413">Commands</h4>
-
-<ul>
-<li><code>qxbacklight --help</code>  Help &amp; basic information.</li>
-<li><code>qxbacklight --up</code>  Increase brightness.</li>
-<li><code>qxbacklight --down</code>  Decrease brightness.</li>
-<li><code>qxbacklight --default</code>  Set brightness value to default.</li>
-</ul>
-
-<h4 id="configurable-options:508a03f8c04b52a769d56187f3644413">Configurable Options</h4>
-
-<p><strong>Strongly recommended</strong> to configure these options for yourself!
-<br>I left my values as a default (for reference: I&rsquo;m using a Notebook with LED LCD display, which is very bright, so my values are relatively low).</p>
-
-<ul>
-<li><code>DEFAULT_BR=18</code> Default brightness (in percentage).</li>
-<li><code>STEP_AMOUNT=2</code> Decrease/increase brightness steps (in percentage).</li>
-<li><code>NOTIFY=&quot;yes&quot;</code> Send notification when setting the brightness.</li>
-</ul>
-
-<p><strong>Notes:</strong></p>
-
-<ul>
-<li>Use <code>xbacklight -get</code> command to get the current brightness value, so you can set it at <code>DEFAULT_BR</code> as a default.</li>
-<li>Since <code>xbacklight -get</code> returns a floating point number (e.g. <code>17.989757</code>) you should <em>round</em> this value to make an integer (e.g. <code>18</code>), and use this number as a default (<code>DEFAULT_BR</code>)</li>
-<li><code>STEP_AMOUNT</code> will be added (increase/brigtness up) or substracted (decrease/brigtness down) from the current brightness value.</li>
-<li>The <code>NOTIFY</code> option works as a feedback (with <code>notify-send</code> command): it shows the new brightness value after setting the brightness. If you don&rsquo;t want a notification, just leave it empty (<code>NOTIFY=&quot;&quot;</code>).</li>
-</ul>
-
-<h4 id="example-keybinds-for-openbox:508a03f8c04b52a769d56187f3644413">Example keybinds for Openbox</h4>
-
-<p>If you are using Openbox as a Window Manager, you can copy&amp;paste these keybinds below into the Openbox key configuration file (<code>~/.config/openbox/rc.xml</code>), then reconfigure or restart Openbox (<code>openbox --reconfigure</code> or <code>openbox --restart</code>).</p>
-
-<div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%">&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-Left&quot;</span>&gt;
-    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --down&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
-    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
-&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-Right&quot;</span>&gt;
-    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --up&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
-    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
-&lt;<span style="color: #330099; font-weight: bold">keybind</span> <span style="color: #330099">key</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;C-W-KP_0&quot;</span>&gt;
-    &lt;<span style="color: #330099; font-weight: bold">action</span> <span style="color: #330099">name</span><span style="color: #555555">=</span><span style="color: #CC3300">&quot;Execute&quot;</span>&gt;
-        &lt;<span style="color: #330099; font-weight: bold">command</span>&gt;qxbacklight --default&lt;/<span style="color: #330099; font-weight: bold">command</span>&gt;
-    &lt;/<span style="color: #330099; font-weight: bold">action</span>&gt;
-&lt;/<span style="color: #330099; font-weight: bold">keybind</span>&gt;
-</pre></div>
-
-
-<p><strong>Notes:</strong></p>
-
-<ul>
-<li>Make sure you configure the keybind keys for yourself.</li>
-<li>If you didn&rsquo;t copy <code>qxbacklight</code> to somewhere in your <code>$PATH</code> (see <code>Installation</code>), then you need to edit the <code>&lt;command&gt;</code> lines by setting the correct path to the script (for example: <code>&lt;command&gt;/path/to/qxbacklight --up&lt;/command&gt;</code>)</li>
-</ul>
-
-    
-   </p>
-</div>
-
                             
                         
                     

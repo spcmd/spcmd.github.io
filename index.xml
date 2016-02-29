@@ -7,7 +7,16 @@
     <language>en-us</language>
     
     
-    <updated>Wed, 24 Feb 2016 15:20:00 CET</updated>
+    <updated>Mon, 29 Feb 2016 12:16:53 CET</updated>
+    
+    <item>
+      <title>spotymenu: control spotify via dmenu</title>
+      <link>http://spcmd.github.io/2016/02/29/spotymenu-control-spotify-via-dmenu/</link>
+      <pubDate>Mon, 29 Feb 2016 12:16:53 CET</pubDate>
+      
+      <guid>http://spcmd.github.io/2016/02/29/spotymenu-control-spotify-via-dmenu/</guid>
+      <description>I while ago it became a pain in the ass for me to select and arrange albums with Spotify&amp;rsquo;s GUI. It&amp;rsquo;s slow, feels heavy and bloated. I wanted something quicker and easier to use, especially something what I can control with the keyboard. I know there is mopidy-spotify and other libspotify based applications too, but those work only with premium accounts. I&amp;rsquo;ve found a bunch of scripts, but those only do basic Spotify controls via dbus (play/pause, prev/next etc.).</description>
+    </item>
     
     <item>
       <title>Run terminal applications from dmenu with their Xresources name</title>
