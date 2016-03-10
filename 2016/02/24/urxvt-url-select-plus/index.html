@@ -49,10 +49,13 @@
       <article class="post-content">
       <p>For urxvt there is a nice perl extension called <em>url-select</em>, written by <a href="https://github.com/muennich/urxvt-perls">Bert Muennich</a>. It was fine until I needed a few more options, especially an option for opening the selected url in an <em>alternative</em> browser. So I made a slight modification: added an option for it, then added another option for opening the selected url with a media player, which is useful for youtube or some other video links. I renamed this modified script to <em>url-select-plus</em> to avoid naming conflicts.</p>
 
+<p><strong>Update (03/10/2016):</strong> I added another option for an image viewer, now you can open image links directly with it (see: <code>imgviewer</code> option).</p>
+
 <p>Now I can use these options in my .Xresources file:</p>
 
 <div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>URxvt.url-select-plus.altlauncher: chromium
 URxvt.url-select-plus.mediaplayer: mpv
+URxvt.url-select-plus.imgviewer: feh
 </pre></div>
 
 
@@ -67,6 +70,7 @@ If it&rsquo;s a youtube link, then I can hit <code>m</code> on the link and it w
 URxvt.url-select-plus.launcher: firefox 
 URxvt.url-select-plus.altlauncher: chromium
 URxvt.url-select-plus.mediaplayer: mpv
+URxvt.url-select-plus.imgviewer: feh
 URxvt.url-select-plus.button: 1
 URxvt.url-select-plus.underline: true
 </pre></div>
