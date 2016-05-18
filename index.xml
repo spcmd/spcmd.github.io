@@ -73,21 +73,12 @@
     </item>
     
     <item>
-      <title>ignotifier-setbadge</title>
-      <link>http://spcmd.github.io/2015/04/25/ignotifier-setbadge/</link>
-      <pubDate>Sat, 25 Apr 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://spcmd.github.io/2015/04/25/ignotifier-setbadge/</guid>
-      <description>Since the Gmail Notifier (ignotifier) addon doesn&amp;rsquo;t allow us to change its icon badge color (and it cannot be styled via css), I made a simple bash script which allows us to change those colors. You can the find the script and the documentation on github: https://github.com/spcmd/ignotifier-setbadge</description>
-    </item>
-    
-    <item>
       <title>About</title>
       <link>http://spcmd.github.io/about/</link>
       <pubDate>Sat, 11 Apr 2015 00:00:00 UTC</pubDate>
       
       <guid>http://spcmd.github.io/about/</guid>
-      <description>Where you can find me: github gist reddit logout.hu spcmdgit [at] gmail [dot] com (only for important cases please!) System &amp;amp; tools: System: Arch Linux + awesome WM Main Browser: Firefox + Vimperator Terminal: URxvt Shell: Zsh Text/Code Editor: Vim File Manager: ranger Mail Client: mutt RSS reader: newsbeuter</description>
+      <description>Where you can find me: github gist reddit logout.hu spcmdgit [at] gmail [dot] com (only for important cases please!) System &amp;amp; tools: System: Arch Linux + bspwm (previously used awesome wm) Main Browser: Luakit (previously used Firefox+Vimperator) Terminal: URxvt Shell: Zsh Text/Code Editor: Vim File Manager: ranger Mail Client: mutt RSS reader: newsbeuter</description>
     </item>
     
     <item>
@@ -97,33 +88,6 @@
       
       <guid>http://spcmd.github.io/2015/04/11/vim-easy-todo/</guid>
       <description>Today I released my very first Vim plugin called Vim Easy TODO. I&amp;rsquo;m using Vim for about 3 weeks now, and I like it a lot. I still have a lot to learn, but I&amp;rsquo;m looking forward to it. I needed some To-do list plugin like PlainTasks for Sublime Text. But I didn&amp;rsquo;t want to use some &amp;ldquo;heavy&amp;rdquo; plugin, I just needed to have some basic, formatted/colorized To-do list. So I decided to write it for myself.</description>
-    </item>
-    
-    <item>
-      <title>qxbacklight</title>
-      <link>http://spcmd.github.io/2015/03/20/qxbacklight/</link>
-      <pubDate>Fri, 20 Mar 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://spcmd.github.io/2015/03/20/qxbacklight/</guid>
-      <description>A bash script for setting the brightness with xbacklight quickly. Dependencies xbacklight Installation Clone the repository (https://github.com/spcmd/qxbacklight.git) or download from Github. Copy qxbacklight to somewhere in your $PATH (for example: ~/bin) or copy wherever you like, then give the full path to the script when using it. Make it executable (for example: chmod +x /path/to/qxbacklight) Open the script with a text editor and configure the options (see Configurable Options and the detailed comments in the script).</description>
-    </item>
-    
-    <item>
-      <title>Firefox &gt; mpv</title>
-      <link>http://spcmd.github.io/2015/03/17/firefox--mpv/</link>
-      <pubDate>Tue, 17 Mar 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://spcmd.github.io/2015/03/17/firefox--mpv/</guid>
-      <description>Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp;amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos. Update (2015.04.20.): added auto stop/play Spotify options. You can find the documentation and the instructions on the Github page: https://github.com/spcmd/firefox-mpv</description>
-    </item>
-    
-    <item>
-      <title>Obsnapper</title>
-      <link>http://spcmd.github.io/2015/03/16/obsnapper/</link>
-      <pubDate>Mon, 16 Mar 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://spcmd.github.io/2015/03/16/obsnapper/</guid>
-      <description>I made this bash script for window snapping function under Openbox. I made this for practicing bash and for my personal use. I don&amp;rsquo;t plan on taking feature requests or whatever. However, It works for me, so I decided to share this as a project. I&amp;rsquo;m using this script under Ubuntu 14.04 with Openbox 3.5.2 and tint2 0.11+svn20121014 at resolution 1366x768 and 1280x800. Features Window snapping to left and right Restoring window position or restoring window to a fixed position Dependencies xwininfo xprop wmctrl using a panel or dock with openbox Configurable options PANEL_NAME=&amp;quot;&amp;quot; (string ; name of the panel or dock ; for example: tint2) PANEL_ID=&amp;quot;&amp;quot; (string ; only if PANEL_NAME is not working ; for example: 0x40006b) PANEL_TYPE=&amp;quot;&amp;quot; (string ; options: left, top, bottom) PX_CORR_LPT= (integer ; some pixel correction, mainly beacause of borders ; you can use this when PANEL_TYPE is set to &amp;ldquo;left&amp;rdquo; ; for example: 2) RESTORE_BEHAVIOUR=&amp;quot;&amp;quot; (string ; options: dynamic, fixed) TOP_MARGIN= (integer ; margin from the top (in pixel), when RESTORE_BEHAVIOUR is set to &amp;ldquo;fixed&amp;rdquo; ; for example: 10) Notes: Do not use quotation marks (&amp;quot;&amp;quot;) with integer type options!</description>
     </item>
     
   </channel>

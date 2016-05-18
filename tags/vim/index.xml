@@ -27,15 +27,6 @@
       <description>Today I released my very first Vim plugin called Vim Easy TODO. I&amp;rsquo;m using Vim for about 3 weeks now, and I like it a lot. I still have a lot to learn, but I&amp;rsquo;m looking forward to it. I needed some To-do list plugin like PlainTasks for Sublime Text. But I didn&amp;rsquo;t want to use some &amp;ldquo;heavy&amp;rdquo; plugin, I just needed to have some basic, formatted/colorized To-do list. So I decided to write it for myself.</description>
     </item>
     
-    <item>
-      <title>Firefox &gt; mpv</title>
-      <link>http://spcmd.github.io/2015/03/17/firefox--mpv/</link>
-      <pubDate>Tue, 17 Mar 2015 00:00:00 UTC</pubDate>
-      
-      <guid>http://spcmd.github.io/2015/03/17/firefox--mpv/</guid>
-      <description>Simple bash script for opening youtube videos and other videos in mpv from Firefox &amp;amp; log watched videos (into a local html file), if you want. Currently the logging option works only with Youtube and Vimeo videos. Update (2015.04.20.): added auto stop/play Spotify options. You can find the documentation and the instructions on the Github page: https://github.com/spcmd/firefox-mpv</description>
-    </item>
-    
   </channel>
 </rss>
 
