@@ -10,8 +10,8 @@
   <meta name="keywords" content="">
   <link rel="canonical" href="http://spcmd.github.io/">
   <link rel="icon" type="image/png" href="http://spcmd.github.io/favicon.png">
-  
-  
+
+
   <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/basscss.css">
   <link rel="stylesheet" type="text/css" href="http://spcmd.github.io/css/main.css">
 </head>
@@ -32,15 +32,15 @@
   </div>
 </header>
 
-    
+
     <div class="post p2 p-responsive wrap" role="main">
         <div class="measure">
             <div class="home">
                 <div class="posts">
-                    
-                        
-                        
-                            
+
+
+
+
 <div class="post">
   <a class="post-link" href="http://spcmd.github.io/2016/02/29/spotymenu-control-spotify-via-dmenu/">
   <div class="clearfix"></div>
@@ -48,15 +48,15 @@
   </a>
   <p class="post-meta">Feb 29, 2016
   | Tags:&nbsp;
-  
-      
+
+
       <a href="http://spcmd.github.io/tags/spotify">spotify</a>
-  
+
       ,&nbsp;
       <a href="http://spcmd.github.io/tags/dmenu">dmenu</a>
   </p>
   <p class="post-content">
-    
+
     <p>I while ago it became a pain in the ass for me to select and arrange albums with Spotify&rsquo;s GUI. It&rsquo;s slow, feels heavy and bloated. I wanted something quicker and easier to use, especially something what I can control with the keyboard. I know there is <a href="https://github.com/mopidy/mopidy-spotify">mopidy-spotify</a> and other libspotify based applications too, but those work only with premium accounts.</p>
 
 <p>I&rsquo;ve found a bunch of scripts, but those only do basic Spotify controls via dbus (play/pause, prev/next etc.). I have my own script which does the same, I needed something more &ldquo;powerful&rdquo;.</p>
@@ -71,12 +71,12 @@
 
 <p><img src="/img/spotymenu_tracklist.png" alt="" /></p>
 
-    
+
    </p>
 </div>
 
-                        
-                            
+
+
 <div class="post">
   <a class="post-link" href="http://spcmd.github.io/2016/02/24/run-terminal-applications-from-dmenu-with-their-xresources-name/">
   <div class="clearfix"></div>
@@ -84,15 +84,15 @@
   </a>
   <p class="post-meta">Feb 24, 2016
   | Tags:&nbsp;
-  
-      
+
+
       <a href="http://spcmd.github.io/tags/dmenu">dmenu</a>
-  
+
       ,&nbsp;
       <a href="http://spcmd.github.io/tags/urxvt">urxvt</a>
   </p>
   <p class="post-content">
-    
+
     <p>If you are using dmenu, you might want to run terminal applications from it. I&rsquo;ve found an old post about a modified <strong>dmenu_run</strong> script in the Arch Linux Forums, in the Dmenu Hacking Thread: <a href="https://bbs.archlinux.org/viewtopic.php?pid=1088164#p1088164">#45</a>. It worked fine, but I&rsquo;m using urxvt with .Xresources color definitions for some apps.</p>
 
 <p>So I modded that script a bit to use the .Xresources name when it&rsquo;s given. For that to work, you need to create list with the names of the apps in <code>~/.dmenu_term_apps</code>, for example:</p>
@@ -112,12 +112,12 @@ rtorrent -name rTorrent
 
 <p>You can find this modified script in my Scripts repo: <strong><a href="https://github.com/spcmd/Scripts/blob/master/dmenu_run">dmenu_run</a></strong></p>
 
-    
+
    </p>
 </div>
 
-                        
-                            
+
+
 <div class="post">
   <a class="post-link" href="http://spcmd.github.io/2016/02/24/dmenu2-modding/">
   <div class="clearfix"></div>
@@ -125,22 +125,22 @@ rtorrent -name rTorrent
   </a>
   <p class="post-meta">Feb 24, 2016
   | Tags:&nbsp;
-  
-      
+
+
       <a href="http://spcmd.github.io/tags/dmenu">dmenu</a>
   </p>
   <p class="post-content">
-    
+
     <p>About a month ago I started using dmenu (<a href="https://bitbucket.org/melek/dmenu2">dmenu2</a>, precisely), but I didn&rsquo;t like the behaviour of the TAB key (completion). I wanted it to behave like <a href="https://addons.mozilla.org/en-US/firefox/addon/vimperator/">Vimperator</a>: TAB key to select the next element, Shift+TAB to select the previous. So I modified the dmenu.c file in the source and now it works the way I wanted.</p>
 
 <p>If you like this TAB behaviour better, you can get this modified version from my <a href="https://github.com/spcmd/dmenu2">dmenu2 repository</a>.</p>
 
-    
+
    </p>
 </div>
 
-                        
-                            
+
+
 <div class="post">
   <a class="post-link" href="http://spcmd.github.io/2016/02/24/urxvt-url-select-plus/">
   <div class="clearfix"></div>
@@ -148,12 +148,12 @@ rtorrent -name rTorrent
   </a>
   <p class="post-meta">Feb 24, 2016
   | Tags:&nbsp;
-  
-      
+
+
       <a href="http://spcmd.github.io/tags/urxvt">urxvt</a>
   </p>
   <p class="post-content">
-    
+
     <p>For urxvt there is a nice perl extension called <em>url-select</em>, written by <a href="https://github.com/muennich/urxvt-perls">Bert Muennich</a>. It was fine until I needed a few more options, especially an option for opening the selected url in an <em>alternative</em> browser. So I made a slight modification: added an option for it, then added another option for opening the selected url with a media player, which is useful for youtube or some other video links. I renamed this modified script to <em>url-select-plus</em> to avoid naming conflicts.</p>
 
 <p><strong>Update (03/10/2016):</strong> I added another option for an image viewer, now you can open image links directly with it (see: <code>imgviewer</code> option).</p>
@@ -174,7 +174,7 @@ If it&rsquo;s a youtube link, then I can hit <code>m</code> on the link and it w
 <p>If you use this instead of the original url-select, don&rsquo;t forget to modify the names for other options too in the .Xresources file:</p>
 
 <p><div class="highlight" style="background: #f0f3f3"><pre style="line-height: 125%"><span></span>URxvt.keysym.M-f: perl:url-select-plus:select_next
-URxvt.url-select-plus.launcher: firefox 
+URxvt.url-select-plus.launcher: firefox
 URxvt.url-select-plus.altlauncher: chromium
 URxvt.url-select-plus.mediaplayer: mpv
 URxvt.url-select-plus.imgviewer: feh
@@ -183,12 +183,12 @@ URxvt.url-select-plus.underline: true
 </pre></div>
 </p>
 
-    
+
    </p>
 </div>
 
-                        
-                            
+
+
 <div class="post">
   <a class="post-link" href="http://spcmd.github.io/2016/01/21/blog-update/">
   <div class="clearfix"></div>
@@ -196,42 +196,42 @@ URxvt.url-select-plus.underline: true
   </a>
   <p class="post-meta">Jan 21, 2016
   | Tags:&nbsp;
-  
-      
+
+
       <a href="http://spcmd.github.io/tags/blog">blog</a>
   </p>
   <p class="post-content">
-    
+
     <p>Long time since I updated this blog, if you read this, it means I&rsquo;ve just successfully migrated from jekyllrb to <a href="http://gohugo.io">Hugo</a>.
 The migration wasn&rsquo;t hard, but it wasn&rsquo;t super easy either. I had a few bumps, I had to read the documentation apparently, but so far I like it.
 I also cleaned up a bit, removed some old, obsolete posts. I hope I can write some new, helpful/useful post in the near future.</p>
 
 <p>In the meantime: if you interested in frequent updates, visit my <a href="https://github.com/spcmd/dotfiles">dotfiles</a> repo and/or my <a href="https://github.com/spcmd/Scripts">Scripts</a> repo. I&rsquo;m always tinkering with my configs and scripts and push them to github frequently. Or you can check out my <a href="https://github.com/spcmd/repositories">repositores list</a>.</p>
 
-    
+
    </p>
 </div>
 
-                        
+
                 </div>
             </div>
             <div class="paginatin_area">
                         <div class="pagination clearfix mb1 mt4">
   <div class="left">
-  
+
   <span class="pagination-item disabled"></span>
-  
+
   </div>
   <div class="right">
-  
+
   <a class="pagination-item" href="/page/2/">Older posts→</a>
-  
+
   </div>
 </div>
 
-                
+
             </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -240,6 +240,13 @@ I also cleaned up a bit, removed some old, obsolete posts. I hope I can write so
     <footer class="footer">
       <div class="p2 wrap">
         <div class="measure mt1 center">
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick" />
+<input type="hidden" name="hosted_button_id" value="HCPYH3LWZZR9Y" />
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+<img alt="" border="0" src="https://www.paypal.com/en_HU/i/scr/pixel.gif" width="1" height="1" />
+</form>
+
           <small>
               Powered by <a href="http://gohugo.io/" target="_blank">Hugo</a><br>Theme is based on <a href="https://github.com/azmelanar/hugo-theme-pixyll" target="_blank">Pixyll</a>
           </small>
